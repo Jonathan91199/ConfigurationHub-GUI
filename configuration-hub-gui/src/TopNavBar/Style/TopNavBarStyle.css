@@ -1,0 +1,15 @@
+.MainNavbarStyle{
+    background-color: rgba(72, 168, 168, 0.438);
+    
+}
+.logoPic{
+    width: 80px;
+    margin-top: -25px;
+    /* height: 40px; */
+}
+@font-face { font-family: Nunito; src: url('./Nunito-ExtraLight.ttf'); } 
+
+.logoName{
+    font-size: 50px;
+    font-family: Nunito;
+}

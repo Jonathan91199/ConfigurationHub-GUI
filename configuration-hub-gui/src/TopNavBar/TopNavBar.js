@@ -10,7 +10,6 @@ class TopNavBar extends Component {
         const Name =
             <div>
                 <span className="logoName">ConfigurationHub &nbsp; </span>
-                
                 <img src={curleyLogo} className="logoPic"></img>
                 &nbsp; |
             </div>

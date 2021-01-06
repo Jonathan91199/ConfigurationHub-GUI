@@ -4,3 +4,15 @@ export function setSignInModalState(value){
         value : value.value
     }
 }
+export function setUserNameInput(value){
+    return {
+        type:'SET_USER_NAME_INPUT',
+        value : value.value
+    }
+}
+export function setPasswordInput(value){
+    return {
+        type:'SET_PASSWORD_INPUT',
+        value : value.value
+    }
+}

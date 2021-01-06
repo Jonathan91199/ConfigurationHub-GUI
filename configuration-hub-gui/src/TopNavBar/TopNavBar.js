@@ -9,23 +9,24 @@ class TopNavBar extends Component {
         console.log(this.props)
         const Name =
             <div>
-                <span className="logoName">ConfigurationHub &nbsp; </span>
+                <span className="logoName">ConfigurationHub </span>
                 <img src={curleyLogo} className="logoPic"></img>
                 &nbsp; |
             </div>
         return (
             <div>
                 <Navbar className="MainNavbarStyle" expand="lg">
-                    <Navbar.Brand className="justify-content-center" href="#home">{Name} </Navbar.Brand>
+                    <Navbar.Brand className="justify-content-center">{Name} </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <Nav.Link href="#home">Home</Nav.Link>
                         </Nav>
-                        <Form inline>
-                            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                            <Button variant="outline-dark">Search</Button>
-                        </Form>
+                        <div class="box-1">
+                            <div class="btn btn-one">
+                                <span>SIGN IN</span>
+                            </div>
+                        </div>
                     </Navbar.Collapse>
                 </Navbar>
             </div>

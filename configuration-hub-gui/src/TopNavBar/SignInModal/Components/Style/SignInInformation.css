@@ -8,6 +8,9 @@
 .SignInRow {
     justify-content: center !important;
 }
+.NoUserError{
+    color: red;
+}
 .SignInSecondBtn{
     margin-top: 10px;
     text-align: -webkit-center !important;

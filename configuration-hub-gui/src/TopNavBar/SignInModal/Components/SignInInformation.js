@@ -2,8 +2,10 @@ import React from 'react'
 import { Component } from 'react';
 import { Form, Row, Col, Spinner } from 'react-bootstrap'
 import { connect } from 'react-redux';
+import { setSignInModalState } from '../../../Actions/MainReducerAction'
 import handleFormChange from './handleFormChange'
-import Validator, {resetFormColor} from './Validator'
+import Validator, { resetFormColor } from './Validator'
+import Axios from 'axios'
 import './Style/SignInInformation.css'
 
 
@@ -20,13 +22,27 @@ class SignInInformation extends Component {
 
     connectUser() {
         resetFormColor()
-        this.setState({loadingSpinner: true})
+        this.setState({ loadingSpinner: true })
+        var _ = this
+
+        Axios.post(`http://localhost:8000/userExist`, {
+            userName: this.props.inputUserName, password: this.props.inputPassword
+        }).then(res => {
+            this.setState({ loadingSpinner: false })
+
+            if (res.data[0]) {
+                _.props.dispatch(setSignInModalState({ value: false }))
+            }
+            else {
+                document.getElementById('NoUserError').innerHTML = '*User Name Or Password Incorrect'
+            }
+
+        })
     }
 
-    
+
 
     handleValidationError(errorList) {
-
         resetFormColor()
         errorList.forEach(error => {
             document.getElementById(error[1]).style.border = "1px solid red"
@@ -54,6 +70,7 @@ class SignInInformation extends Component {
             <div className="SignInInformationMainDiv">
                 <Form>
                     <Col>
+                        <Row className="SignInRow NoUserError" id="NoUserError"></Row>
                         <Row className="SignInRow">
                             <Form.Control id="userName" className="SignInFormControl" placeholder="User Name" onChange={() => this.handleChange('userName')} value={this.props.inputUserName} />
                         </Row>

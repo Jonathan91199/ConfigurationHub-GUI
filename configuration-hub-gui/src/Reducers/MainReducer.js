@@ -1,11 +1,17 @@
 import { act } from "react-dom/test-utils";
 
 const defultState = {
-    testState : true
+    signInShowState : false
 }
 
 export default function MainReducer({state = defultState} = {}, action){
-    switch(action.value){
+    switch(action.type){
+        case 'SET_SIGN_IN_MODAL_STATE' :
+            return{
+                ...state,
+                signInShowState : action.value 
+            }
+
         default : return state
     }
 }

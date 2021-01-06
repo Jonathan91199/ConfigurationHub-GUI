@@ -1,17 +1,30 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Navbar, NavDropdown, Nav, Form, FormControl, Button } from 'react-bootstrap'
+import { Navbar} from 'react-bootstrap'
+import { setSignInModalState } from '../Actions/MainReducerAction'
+import SignInIcon from '@material-ui/icons/ExitToApp'
+import SignInModal from './SignInModal/SignInModal'
 import curleyLogo from './Style/curleyLogo.png'
 import './Style/TopNavBarStyle.css'
 
 class TopNavBar extends Component {
-    render() {
+    constructor(props) {
+        super(props)
+        this.handleSignInClick = this.handleSignInClick.bind(this)
+    }
+
+    handleSignInClick() {
         console.log(this.props)
+
+        this.props.dispatch(setSignInModalState({value : true}))
+    }
+    render() {
+
         const Name =
             <div>
                 <span className="logoName">ConfigurationHub </span>
                 <img src={curleyLogo} className="logoPic"></img>
-                &nbsp; |
+                &nbsp;
             </div>
         return (
             <div>
@@ -19,16 +32,17 @@ class TopNavBar extends Component {
                     <Navbar.Brand className="justify-content-center">{Name} </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="mr-auto">
+                        {/* <Nav className="mr-auto">
                             <Nav.Link href="#home">Home</Nav.Link>
-                        </Nav>
-                        <div class="box-1">
-                            <div class="btn btn-one">
-                                <span>SIGN IN</span>
+                        </Nav> */}
+                        <div className="box-1">
+                            <div className="btn btn-one" onClick={this.handleSignInClick}>
+                                <span>SIGN IN <SignInIcon/></span>
                             </div>
                         </div>
                     </Navbar.Collapse>
                 </Navbar>
+                <SignInModal/>
             </div>
         )
     }

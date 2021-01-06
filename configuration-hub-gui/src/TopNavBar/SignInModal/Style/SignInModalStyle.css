@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Nunito;
+    src: url('../../Style/Nunito-ExtraLight.ttf');
+}
+
+.SignInModalHeader {
+    justify-content: center !important;
+}
+
+
+
+.SignInModalTitle {
+    font-family: Nunito;
+    font-weight: 800 !important;
+    /* font-size: 10px !important; */
+}

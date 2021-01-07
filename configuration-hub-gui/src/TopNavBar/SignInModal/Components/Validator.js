@@ -24,6 +24,8 @@ export function resetFormColor() {
     document.getElementById('password').style.border = '1px solid #ced4da'
     document.getElementById('userNameErrorTag').innerHTML = ''
     document.getElementById('passwordErrorTag').innerHTML = ''
+    document.getElementById('NoUserError').innerHTML = ''
+
 }
 
 export default function Validator(userName, password) {

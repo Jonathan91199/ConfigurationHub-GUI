@@ -24,20 +24,22 @@ class SignInInformation extends Component {
         resetFormColor()
         this.setState({ loadingSpinner: true })
         var _ = this
+        setTimeout(() => {
+            Axios.post(`http://localhost:8000/userExist`, {
+                userName: this.props.inputUserName, password: this.props.inputPassword
+            }).then(res => {
+                this.setState({ loadingSpinner: false })
 
-        Axios.post(`http://localhost:8000/userExist`, {
-            userName: this.props.inputUserName, password: this.props.inputPassword
-        }).then(res => {
-            this.setState({ loadingSpinner: false })
+                if (res.data[0]) {
+                    _.props.dispatch(setSignInModalState({ value: false }))
+                }
+                else {
+                    document.getElementById('NoUserError').innerHTML = '*User Name Or Password Incorrect'
+                }
 
-            if (res.data[0]) {
-                _.props.dispatch(setSignInModalState({ value: false }))
-            }
-            else {
-                document.getElementById('NoUserError').innerHTML = '*User Name Or Password Incorrect'
-            }
+            })
+        }, 1000)
 
-        })
     }
 
 
@@ -82,7 +84,7 @@ class SignInInformation extends Component {
 
                         <Row className="SignInRow">
                             <div className="SignInSecondBtn">
-                                <div className="btn btn-SignInSecondBtn" onClick={this.handleClick}>
+                                <div className="btn-SignInSecondBtn" onClick={this.handleClick}>
                                     <span className="SignInSpan" id="SignInSpan">{loadingSpinner}</span>
                                 </div>
                             </div>

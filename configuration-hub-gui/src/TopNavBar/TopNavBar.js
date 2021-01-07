@@ -14,8 +14,6 @@ class TopNavBar extends Component {
     }
 
     handleSignInClick() {
-        console.log(this.props)
-
         this.props.dispatch(setSignInModalState({value : true}))
     }
     render() {
@@ -36,7 +34,7 @@ class TopNavBar extends Component {
                             <Nav.Link href="#home">Home</Nav.Link>
                         </Nav> */}
                         <div className="box-1">
-                            <div className="btn btn-one" onClick={this.handleSignInClick}>
+                            <div className="SignInFirstBtn btn-one" onClick={this.handleSignInClick}>
                                 <span>SIGN IN <SignInIcon/></span>
                             </div>
                         </div>

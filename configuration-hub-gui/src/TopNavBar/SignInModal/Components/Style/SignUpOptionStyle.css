@@ -1,23 +1,11 @@
-.SignInFormControl {
-    border-radius: 1.25rem !important;
-    margin-top: 15px;
-    width: 50% !important;
-    height: 50px !important;
-}
-
-.SignInRow {
-    justify-content: center !important;
-}
-.NoUserError{
-    color: red;
-}
-.SignInSecondBtn{
+.SignUpBtn{
     margin-top: 10px;
     text-align: -webkit-center !important;
 }
-.btn-SignInSecondBtn {
+.btn-SignUpBtn {
+    color: rgb(0, 0, 0);
+    
     line-height: 40px;
-    color: #FFF;
     transition: all 0.5s;
     position: relative;
     width: 110px;
@@ -25,11 +13,23 @@
     cursor: pointer;
     display: table-cell !important;
 }
-.SignInSpan{
-    color: maroon;
+.SignUpCol{
+    justify-content: center;
+    display: flex;
+}
+.SignUpRow{
+    align-items: baseline;
+}
+.SignUpSpan{
+    font-size: small;
+    font-weight: 500;
+}
+.SignUpPTag{
+    color: rgba(194, 45, 7, 0.849);
+    margin-right: 15px;
 }
 
-.btn-SignInSecondBtn::before {
+.btn-SignUpBtn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -38,16 +38,20 @@
     height: 100%;
     z-index: 1;
     border-radius: 30px;
-    background-color: rgba(40, 196, 87, 0.39);
+    color: black!important;
+    opacity: 0.5;
+    background-color: rgba(17, 161, 187, 0.753);
+    /* background-color: rgba(88, 23, 88, 0.39); */
+
     transition: all 0.3s;
 }
 
-.btn-SignInSecondBtn:hover::before {
+.btn-SignUpBtn:hover::before {
     opacity: 0;
     transform: scale(0.5, 0.5);
 }
 
-.btn-SignInSecondBtn::after {
+.btn-SignUpBtn::after {
     content: '';
     position: absolute;
     top: 0;
@@ -64,7 +68,7 @@
     transform: scale(1.2, 1.2);
 }
 
-.btn-SignInSecondBtn:hover::after {
+.btn-SignUpBtn:hover::after {
     opacity: 1;
     transform: scale(1, 1);
 }

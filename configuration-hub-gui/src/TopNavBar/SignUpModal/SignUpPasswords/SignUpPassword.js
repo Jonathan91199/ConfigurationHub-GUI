@@ -36,6 +36,7 @@ class SignUpPassword extends Component {
                         <Form.Check type="checkbox" label="View Password" id="passwordCheckBoxId" onClick={this.handleClick} />
                     </Form.Group>
                 </Row>
+                <hr style={{border : "0.1px solid grey"}}/>
             </div>
         )
     }

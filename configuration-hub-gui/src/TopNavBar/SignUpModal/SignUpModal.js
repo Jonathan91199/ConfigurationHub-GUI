@@ -7,6 +7,7 @@ import SignUpExplenation from './SignUpExplenation/SignUpExplenation'
 import SignUpNameForms from './SignUpNameForms/SignUpNameForms'
 import SignUpPersonalData from './SignUpPersonalData/SignUpPersonalData'
 import SignUpPassword from './SignUpPasswords/SignUpPassword'
+import SignUpButton from './SignUpButton/SignUpButton'
 import './Style/SignUpModalStyle.css'
 
 class SignUpModal extends Component {
@@ -27,10 +28,10 @@ class SignUpModal extends Component {
                     <SignUpNameForms/>
                     <SignUpPersonalData/>
                     <SignUpPassword/>
+                    <SignUpButton/>
 
                 </Modal.Body>
-                <Modal.Footer>
-                </Modal.Footer>
+               
             </Modal>
 
         )

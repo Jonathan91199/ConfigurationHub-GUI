@@ -22,7 +22,7 @@ class SignInModal extends Component {
                     aria-labelledby="example-custom-modal-styling-title"
                 >
                     <Modal.Header className="SignInModalHeader">
-                        <Modal.Title  className="SignInModalTitle">Sign In For ConfigurationHub</Modal.Title>
+                        <Modal.Title  className="SignInModalTitle">Sign In</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <SignInInformation/>

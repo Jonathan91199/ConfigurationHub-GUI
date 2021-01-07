@@ -2,6 +2,7 @@ import { act } from "react-dom/test-utils";
 
 const defultState = {
     signInShowState: false,
+    signUpShowState : false,
     inputUserName: '',
     inputPassword: ''
 
@@ -15,6 +16,13 @@ export default function MainReducer( state = defultState , action) {
                 signInShowState: action.value
             }
         }
+        case 'SET_SIGN_UP_MODAL_STATE' :{
+            return{
+                ...state,
+                signUpShowState : action.value
+            }
+        }
+
         case 'SET_USER_NAME_INPUT': {
             return {
                 ...state,
@@ -29,6 +37,7 @@ export default function MainReducer( state = defultState , action) {
                 signInShowState : true
             }
         }
+        
         default: return state
     }
 }

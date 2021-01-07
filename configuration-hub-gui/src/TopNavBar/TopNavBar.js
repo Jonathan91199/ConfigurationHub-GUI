@@ -4,6 +4,7 @@ import { Navbar} from 'react-bootstrap'
 import { setSignInModalState } from '../Actions/MainReducerAction'
 import SignInIcon from '@material-ui/icons/ExitToApp'
 import SignInModal from './SignInModal/SignInModal'
+import SignUpModal from './SignUpModal/SignUpModal'
 import curleyLogo from './Style/curleyLogo.png'
 import './Style/TopNavBarStyle.css'
 
@@ -41,6 +42,7 @@ class TopNavBar extends Component {
                     </Navbar.Collapse>
                 </Navbar>
                 <SignInModal/>
+                <SignUpModal/>
             </div>
         )
     }

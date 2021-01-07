@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Nunito;
+    src: url('../../Style/Nunito-ExtraLight.ttf');
+}
+
+.SignUpModalHeader {
+    justify-content: center !important;
+}
+
+
+
+.SignUpModalTitle {
+    font-family: Nunito;
+    font-weight: 800 !important;
+    /* font-size: 10px !important; */
+}
+.SignUpForm{
+    border-radius: 2.25rem !important;
+    margin-bottom: 15px;
+}
+

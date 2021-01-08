@@ -76,11 +76,11 @@ class SignInInformation extends Component {
                         <Row className="SignInRow">
                             <Form.Control id="userName" className="SignInFormControl" placeholder="User Name" onChange={() => this.handleChange('userName')} value={this.props.inputUserName} />
                         </Row>
-                        <Row className="SignInRow"><p id="userNameErrorTag"></p></Row>
+                        <Row className="SignInRow SignInErrorTag"><p id="userNameErrorTag"></p></Row>
                         <Row className="SignInRow">
                             <Form.Control id="password" type="password" className="SignInFormControl" placeholder="Password" onChange={() => this.handleChange('password')} value={this.props.inputPassword} />
                         </Row>
-                        <Row className="SignInRow"><p id="passwordErrorTag"></p></Row>
+                        <Row className="SignInRow SignInErrorTag"><p id="passwordErrorTag"></p></Row>
 
                         <Row className="SignInRow">
                             <div className="SignInSecondBtn">

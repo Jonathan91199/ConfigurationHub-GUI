@@ -1,5 +1,6 @@
 .Explenation{
     font-family: Nunito;
     font-weight: 700;
-    color: rgb(6, 78, 136);
+    /* color: rgb(6, 78, 136); */
+    color: black !important;
 }

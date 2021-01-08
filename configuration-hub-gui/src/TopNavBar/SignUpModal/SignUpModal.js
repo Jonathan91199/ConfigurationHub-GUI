@@ -15,6 +15,7 @@ class SignUpModal extends Component {
     render() {
         return (
             <Modal
+                className="SignUpModalMainDiv"
                 show={this.props.signUpShowState}
                 onHide={() => this.props.dispatch(setSignUpModalState({ value: false }))}
                 dialogClassName="modal-90w"

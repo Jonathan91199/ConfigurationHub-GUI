@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-image: url('.//160-1600491_autodesk-wallpaper-website-background.jpg');
+  background-size: contain;
+  background-repeat: round;
+
+  height: 100vh;
 }
 
 .App-logo {

@@ -7,15 +7,18 @@ class SignUpNameForms extends Component {
 
     render() {
         return (
-            <Row>
+            <Row className="SignUpFormRows">
                 <Col>
                     <Form>
                         <Form.Control className="SignUpForm FirstNameForm" id="FirstNameForm" type="text" placeholder="First Name" />
+                        <span className="SignUpErrorTagSpan" id="FirstNameFormErrorTag"></span>
                     </Form>
                 </Col>
                 <Col>
                     <Form>
                         <Form.Control className="SignUpForm LastNameForm" id="LastNameForm" type="text" placeholder="Last Name" />
+                        <span  className="SignUpErrorTagSpan" id="LastNameFormErrorTag"></span>
+
                     </Form>
                 </Col>
             </Row>

@@ -19,15 +19,19 @@ class SignUpPassword extends Component {
         let formType = this.state.showPassword ? "text" : "password"
         return (
             <div>
-                <Row>
+                <Row className="SignUpFormRows">
                     <Col>
                         <Form>
                             <Form.Control className="SignUpForm FirstPasswordForm" id="FirstPasswordForm" type={formType} placeholder="Password" />
+                            <span className="SignUpErrorTagSpan" id="FirstPasswordFormErrorTag"></span>
+
                         </Form>
                     </Col>
                     <Col>
                         <Form>
-                            <Form.Control className="SignUpForm SecondPasswordForm"  type={formType} id="SecondPasswordForm" placeholder="Enter Password Again" />
+                            <Form.Control className="SignUpForm SecondPasswordForm" type={formType} id="SecondPasswordForm" placeholder="Enter Password Again" />
+                            <span className="SignUpErrorTagSpan" id="SecondPasswordFormErrorTag"></span>
+
                         </Form>
                     </Col>
                 </Row>
@@ -36,7 +40,7 @@ class SignUpPassword extends Component {
                         <Form.Check type="checkbox" label="View Password" id="passwordCheckBoxId" onClick={this.handleClick} />
                     </Form.Group>
                 </Row>
-                <hr style={{border : "0.1px solid grey"}}/>
+                <hr style={{ border: "0.1px solid grey" }} />
             </div>
         )
     }

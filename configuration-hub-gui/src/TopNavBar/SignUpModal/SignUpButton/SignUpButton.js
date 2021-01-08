@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
 import { Col, Row, Form } from 'react-bootstrap'
 import AddIcon from '@material-ui/icons/ControlPoint'
+import SingUpValidation from '../SignUpValidation/SignUpValidation'
 import './Style/SignUpButtonStyle.css'
 
 class SignUpButton extends Component {
+    constructor(props){
+        super(props)
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick(){
+        SingUpValidation()
+    }
     render() {
         return (
             <Row>
@@ -14,7 +23,7 @@ class SignUpButton extends Component {
                 </Col>
                 <Col>
                     <div className="SignUpbox">
-                        <div className="SignUpSecondBtn SUBtn" >
+                        <div className="SignUpSecondBtn SUBtn" onClick={this.handleClick} >
                             <span className="testSpan"><AddIcon/></span>
                         </div>
                     </div>

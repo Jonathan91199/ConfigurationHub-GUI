@@ -6,18 +6,25 @@
 .SignUpModalHeader {
     justify-content: center !important;
 }
-
-
-
+.SignUpModalTitleRow{
+    display: flow-root !important;
+}
+.SignUpFormRows{
+    margin-bottom: 15px;
+}
+.SignUpErrorTagSpan{
+    color: rgb(245, 51, 51);
+    margin-left: 5px;
+}
 .SignUpModalTitle {
     font-family: Nunito;
     font-weight: 800 !important;
     color: white;
+    text-align: -webkit-center !important;
     /* font-size: 10px !important; */
 }
 .SignUpForm{
     border-radius: 2.25rem !important;
-    margin-bottom: 15px;
 }
 
 .SignUpModalMainDiv .modal-90w .modal-content {
@@ -25,4 +32,17 @@
     background: transparent !important;
     backdrop-filter: saturate(140%) blur(40px) !important;
     
+}
+.BackSignArrowDiv {
+    width: fit-content !important;
+
+    align-self: center !important;
+    color: white;
+    cursor: pointer;
+}
+.BackSignArrowDiv :active{
+    border: 1px solid rgb(3, 20, 58) !important;
+    border-radius: 30px;
+
+    background-color:rgb(3, 20, 58) !important;
 }

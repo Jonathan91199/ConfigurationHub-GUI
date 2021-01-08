@@ -22,9 +22,11 @@ function PasswordLengthValidation(password) {
 export function resetFormColor() {
     document.getElementById('userName').style.border = '1px solid #ced4da'
     document.getElementById('password').style.border = '1px solid #ced4da'
-    document.getElementById('userNameErrorTag').innerHTML = ''
-    document.getElementById('passwordErrorTag').innerHTML = ''
-    document.getElementById('NoUserError').innerHTML = ''
+    const idNames = ['userNameErrorTag', 'passwordErrorTag', 'NoUserError']
+
+    idNames.forEach(name => {
+        document.getElementById(name).innerHTML = ''
+    })
 
 }
 

@@ -19,7 +19,7 @@ class SignUpPassword extends Component {
         let formType = this.state.showPassword ? "text" : "password"
         return (
             <div>
-                <Row className="SignUpFormRows">
+                <Row className="SignUpFormRows passwordRows">
                     <Col>
                         <Form>
                             <Form.Control className="SignUpForm FirstPasswordForm" id="FirstPasswordForm" type={formType} placeholder="Password" />
@@ -36,6 +36,8 @@ class SignUpPassword extends Component {
                     </Col>
                 </Row>
                 <Row className="PasswordCheckBox">
+                    <span  id="passwordIdenticalErrorBadge" className="badge badge-danger"></span>
+
                     <Form.Group controlId="formBasicCheckbox" >
                         <Form.Check type="checkbox" label="View Password" id="passwordCheckBoxId" onClick={this.handleClick} />
                     </Form.Group>

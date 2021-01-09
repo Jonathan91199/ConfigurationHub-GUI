@@ -45,9 +45,14 @@ div[class*=SignUpbox] {
     border-bottom-color: rgba(245, 44, 44, 0.603);
     transform: scale(0.1, 1);
 }
-
+.termsAgreeCheckboxMain{
+    border-radius: 0px;
+}
 .SUBtn:hover span {
     letter-spacing: 2px;
+}
+#termsAgreeCheckboxMain{
+    border-radius: 10px;
 }
 
 .SUBtn:hover::before {

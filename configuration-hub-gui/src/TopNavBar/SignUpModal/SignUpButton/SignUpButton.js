@@ -17,7 +17,7 @@ class SignUpButton extends Component {
         return (
             <Row>
                 <Col>
-                    <Form.Group controlId="formBasicCheckbox" >
+                    <Form.Group controlId="formBasicCheckbox" id="termsAgreeCheckboxMain" >
                         <Form.Check type="checkbox" className="termsAgreeCheckBox" label="I Agree To The Terms Of The Service" id="termsAgreeCheckbox"/>
                     </Form.Group>
                 </Col>

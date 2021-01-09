@@ -4,3 +4,6 @@
     /* color: rgb(6, 78, 136); */
     color: black !important;
 }
+.explenationRow{
+    justify-content: space-around !important;
+}

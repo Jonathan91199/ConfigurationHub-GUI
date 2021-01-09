@@ -3,7 +3,6 @@ import EmailValidator from 'email-validator';
 
 
 export default function SingUpValidation() {
-    var answer = true
     const INPUT_FORMS = ["FirstNameForm", "LastNameForm", "EmailAddForm", "userNameForm", "FirstPasswordForm", "SecondPasswordForm"]
     ResetAllForms(INPUT_FORMS)
     let basicValidationAnswer = BasicValidation(INPUT_FORMS)

@@ -4,7 +4,9 @@ const defultState = {
     signInShowState: false,
     signUpShowState : false,
     inputUserName: '',
-    inputPassword: ''
+    inputPassword: '',
+    SignUpUserError : '',
+    SignUpExplenation : 'info'
 
 }
 
@@ -35,6 +37,18 @@ export default function MainReducer( state = defultState , action) {
                 ...state,
                 inputPassword : action.value,
                 signInShowState : true
+            }
+        }
+        case 'SET_SIGN_UP_USER_ERROR' : {
+            return {
+                ...state,
+                SignUpUserError : action.value
+            }
+        }
+        case 'SET_SIGN_UP_EXPLENATION_ALERT' :{
+            return {
+                ...state,
+                SignUpExplenation : action.value
             }
         }
         

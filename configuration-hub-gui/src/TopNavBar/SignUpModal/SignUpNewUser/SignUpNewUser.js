@@ -23,7 +23,15 @@ function CheckUserExist(inputs, that) {
         console.log(res.data)
         if (res.data[0]) {
             that.props.dispatch(setSignUpUserError({ value: res.data[1] }))
-            that.props.dispatch(setSignUpExplenationAlert({value : 'danger'}))
+            that.props.dispatch(setSignUpExplenationAlert({ value: 'danger' }))
         }
+        else (
+            Axios.post(`http://localhost:8000/newUser`, inputs).then(() => {
+                that.props.dispatch(setSignUpUserError({ value: "Success !" }))
+                that.props.dispatch(setSignUpExplenationAlert({ value: 'success' }))
+            }
+
+            )
+        )
     })
 }

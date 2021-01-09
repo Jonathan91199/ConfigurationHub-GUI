@@ -11,7 +11,8 @@ class SignUpExplenation extends Component {
     render() {
         var alertType = {
             info : "Please Fill The Following Information For Us To Create Your New ConfigurationHub User",
-            danger : this.props.SignUpUserError
+            danger : this.props.SignUpUserError,
+            success : this.props.SignUpUserError
         }
         return (
             <div className="SignUpExplenation">

@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Navbar} from 'react-bootstrap'
+import { Navbar } from 'react-bootstrap'
 import { setSignInModalState } from '../Actions/MainReducerAction'
-import SignInIcon from '@material-ui/icons/ExitToApp'
 import SignInModal from './SignInModal/SignInModal'
 import SignUpModal from './SignUpModal/SignUpModal'
 import curleyLogo from './Style/curleyLogo.png'
+import SignInOption from './SignInOption/SignInOption'
+import UserConnectedInfo from './UserConnectedInfo/UserConnectedInfo'
 import './Style/TopNavBarStyle.css'
 
 class TopNavBar extends Component {
@@ -15,9 +16,13 @@ class TopNavBar extends Component {
     }
 
     handleSignInClick() {
-        this.props.dispatch(setSignInModalState({value : true}))
+        this.props.dispatch(setSignInModalState({ value: true }))
     }
     render() {
+        let userSignIn = {
+            true: <UserConnectedInfo/>,
+            false: <SignInOption />
+        }
 
         const Name =
             <div>
@@ -31,18 +36,12 @@ class TopNavBar extends Component {
                     <Navbar.Brand className="justify-content-center">{Name} </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        {/* <Nav className="mr-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                        </Nav> */}
-                        <div className="box-1">
-                            <div className="SignInFirstBtn btn-one" onClick={this.handleSignInClick}>
-                                <span>SIGN IN <SignInIcon/></span>
-                            </div>
-                        </div>
+                       
+                       {userSignIn[this.props.isUserConnected]}
                     </Navbar.Collapse>
                 </Navbar>
-                <SignInModal/>
-                <SignUpModal/>
+                <SignInModal />
+                <SignUpModal />
             </div>
         )
     }

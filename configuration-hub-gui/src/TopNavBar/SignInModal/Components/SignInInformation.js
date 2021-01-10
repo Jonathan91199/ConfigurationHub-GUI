@@ -2,7 +2,7 @@ import React from 'react'
 import { Component } from 'react';
 import { Form, Row, Col, Spinner } from 'react-bootstrap'
 import { connect } from 'react-redux';
-import { setSignInModalState } from '../../../Actions/MainReducerAction'
+import { setSignInModalState, setIsUserConnected, setUserConnectedInfo } from '../../../Actions/MainReducerAction'
 import handleFormChange from './handleFormChange'
 import Validator, { resetFormColor } from './Validator'
 import Axios from 'axios'
@@ -32,6 +32,8 @@ class SignInInformation extends Component {
 
                 if (res.data[0]) {
                     _.props.dispatch(setSignInModalState({ value: false }))
+                    _.props.dispatch(setUserConnectedInfo({value : res.data[1]}))
+                    _.props.dispatch(setIsUserConnected({value : true}))
                 }
                 else {
                     document.getElementById('NoUserError').innerHTML = '*User Name Or Password Incorrect'

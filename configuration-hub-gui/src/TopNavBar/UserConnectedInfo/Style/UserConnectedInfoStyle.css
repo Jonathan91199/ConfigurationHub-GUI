@@ -1,0 +1,99 @@
+.signUserMainDiv {
+    height: 33.33%;
+    width: 100%;
+    text-align: -webkit-right;
+}
+.signUserMainCol{
+    display: grid !important;
+}
+.signUserMainRow{
+    width: fit-content;
+    text-align: -webkit-center;
+}
+.userConnectedUserNameSpan{
+    font-family: Nunito;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.userConnectedSign {
+    font-size: 3.5rem !important;
+    cursor: pointer;
+    /* color: rgb(12, 88, 88); */
+    color: rgb(121, 18, 18);
+}
+
+.popOverTitle {
+    text-align: center !important;
+    font-size: 25px !important;
+    background: transparent !important;
+}
+
+#userInfoPopover {
+    min-width: fit-content;
+    background: rgb(139, 27, 27) !important;
+    color: white;
+    /* backdrop-filter: saturate(1%) blur(40px) !important; */
+}
+.signOutBreakingLine{
+    border: 1px solid white;
+}
+.popOverContent {
+    color: white !important;
+}
+
+.SignOutFirstBtn {
+    margin-top: 10px;
+    text-align: -webkit-center !important;
+}
+
+.btn-SignOutFirstBtn {
+    color: rgb(250, 245, 245);
+    line-height: 40px;
+    transition: all 0.5s;
+    position: relative;
+    width: 110px;
+    height: 40px;
+    cursor: pointer;
+    display: table-cell !important;
+}
+
+.btn-SignOutFirstBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    color: black!important;
+    z-index: -1;
+    opacity: 0.5;
+    background-color: rgb(18, 6, 126);
+    /* background-color: rgba(88, 23, 88, 0.39); */
+    transition: all 0.3s;
+}
+
+.btn-SignOutFirstBtn:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+}
+
+.btn-SignOutFirstBtn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(26, 4, 150, 0.5);
+    border-radius: 30px;
+    transform: scale(1.2, 1.2);
+}
+
+.btn-SignOutFirstBtn:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}

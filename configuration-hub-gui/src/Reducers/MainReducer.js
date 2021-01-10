@@ -3,15 +3,34 @@ import { act } from "react-dom/test-utils";
 const defultState = {
     signInShowState: false,
     signUpShowState : false,
+
     inputUserName: '',
     inputPassword: '',
+
     SignUpUserError : '',
-    SignUpExplenation : 'info'
+    SignUpExplenation : 'info',
+
+    isUserConnected : false,
+    userConnectedInfo : null
+    
 
 }
 
 export default function MainReducer( state = defultState , action) {
     switch (action.type) {
+        case 'SET_IS_USER_CONNECTED' : {
+            return {
+                ...state,
+                isUserConnected : action.value
+            }
+        }
+        case 'SET_USER_CONNECTED_INFO' : {
+            return {
+                ...state,
+                userConnectedInfo : action.value
+            }
+        }
+
         case 'SET_SIGN_IN_MODAL_STATE': {
             return {
                 ...state,

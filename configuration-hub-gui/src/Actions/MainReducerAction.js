@@ -36,3 +36,16 @@ export function setSignUpExplenationAlert(value) {
         value: value.value
     }
 }
+export function setIsUserConnected(value) {
+    return {
+        type : "SET_IS_USER_CONNECTED",
+        value : value.value
+    }
+}
+export function setUserConnectedInfo(value){
+    return {
+        type : "SET_USER_CONNECTED_INFO",
+        value : value.value
+    }
+}
+

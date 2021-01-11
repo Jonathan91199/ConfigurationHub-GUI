@@ -1,0 +1,40 @@
+.WelcomeCardMainDiv {
+    margin-left: 30px;
+    font-family: Nunito;
+    font-weight: 700 !important;
+    font-size: 20px;
+    background: transparent !important;
+    color: rgb(129, 168, 199);
+}
+
+.WelcomeCard {
+    background: rgba(20, 15, 15, 0.795) !important;
+    backdrop-filter: saturate(140%) blur(40px) !important;
+}
+
+.WelcomeCardTitle {
+    font-weight: 800 !important;
+    font-size: 35px !important;
+}
+
+.WelcomeCardSubTitle {
+    font-weight: 800 !important;
+    font-size: 25px !important;
+    color: rgb(224, 64, 77) !important;
+}
+.ExplentaionCardHR{
+    border: 1px solid white;
+}
+
+.ExplenationMainDiv {
+    text-align: left;
+}
+
+.ExplenationRow {
+    /* margin: 15px; */
+    margin:15px 25px 15px !important;
+}
+
+.ExplenationListRow {
+    margin-left: 30px !important;
+}

@@ -3,6 +3,8 @@ import { Component } from 'react';
 import { Form, Row, Col, Spinner } from 'react-bootstrap'
 import { connect } from 'react-redux';
 import { setSignInModalState, setIsUserConnected, setUserConnectedInfo } from '../../../Actions/MainReducerAction'
+import { NotificationManager } from 'react-notifications'
+
 import handleFormChange from './handleFormChange'
 import Validator, { resetFormColor } from './Validator'
 import Axios from 'axios'
@@ -25,20 +27,18 @@ class SignInInformation extends Component {
         this.setState({ loadingSpinner: true })
         var _ = this
         setTimeout(() => {
-            Axios.post(`http://localhost:8000/userExist`, {
-                userName: this.props.inputUserName, password: this.props.inputPassword
+            Axios.post(`http://localhost:51241/api/Authentication/authenticate`, {
+                "username": this.props.inputUserName, "password": this.props.inputPassword
             }).then(res => {
                 this.setState({ loadingSpinner: false })
+                _.props.dispatch(setSignInModalState({ value: false }))
+                _.props.dispatch(setUserConnectedInfo({ value: res.data }))
+                _.props.dispatch(setIsUserConnected({ value: true }))
+               
 
-                if (res.data[0]) {
-                    _.props.dispatch(setSignInModalState({ value: false }))
-                    _.props.dispatch(setUserConnectedInfo({value : res.data[1]}))
-                    _.props.dispatch(setIsUserConnected({value : true}))
-                }
-                else {
-                    document.getElementById('NoUserError').innerHTML = '*User Name Or Password Incorrect'
-                }
-
+            }).catch(err => {
+                this.setState({ loadingSpinner: false })
+                NotificationManager.error(err.message, 'Error')
             })
         }, 1000)
 

@@ -33,7 +33,7 @@ class UserConnectedInfo extends Component {
                         <UserIcon className="userConnectedSign" />
                     </OverlayTrigger >
                     
-                    <span className="userConnectedUserNameSpan">{this.props.userConnectedInfo.userName}</span>
+                    <span className="userConnectedUserNameSpan">{this.props.userConnectedInfo.username}</span>
                 </Col>
             </Row>
         </div>

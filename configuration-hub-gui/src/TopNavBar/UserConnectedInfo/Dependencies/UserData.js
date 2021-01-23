@@ -12,9 +12,7 @@ class UserData extends Component{
                 <Row>
                     {`Last Name : ${this.props.userConnectedInfo.lastName}`}
                 </Row>
-                <Row>
-                    {`Email Address : ${this.props.userConnectedInfo.emailAddress}`}
-                </Row>
+               
             </Col>
         )
     }

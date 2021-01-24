@@ -22,7 +22,7 @@ class UserConnectedInfo extends Component {
                 <Col className="signUserMainCol">
                     <OverlayTrigger key="userInformationTT" trigger="click" rootClose placement="bottom" overlay={
                         <Popover id="userInfoPopover">
-                            <Popover.Title className="popOverTitle"><strong>{this.props.userConnectedInfo.userName}</strong></Popover.Title>
+                            <Popover.Title className="popOverTitle"><strong>{this.props.userConnectedInfo.username}</strong></Popover.Title>
                             <Popover.Content className="popOverContent">
                                 <UserData />
                                 <hr className="signOutBreakingLine"></hr>

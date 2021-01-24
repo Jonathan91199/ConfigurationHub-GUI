@@ -22,6 +22,8 @@ class SignInInformation extends Component {
 
     }
 
+    
+
     connectUser() {
         resetFormColor()
         this.setState({ loadingSpinner: true })
@@ -66,6 +68,15 @@ class SignInInformation extends Component {
     handleChange(type) {
         let value = document.getElementById(type).value
         handleFormChange(this, type, value)
+    }
+    componentDidMount(){
+        var _ = this
+        document.getElementById('password').addEventListener('keyup', function(eve){
+            if(eve.key === 'Enter'){
+                eve.preventDefault()
+                _.connectUser()
+            }
+        })
     }
     render() {
         let loadingSpinner = this.state.loadingSpinner ? <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" /> : <div>Sign In</div>

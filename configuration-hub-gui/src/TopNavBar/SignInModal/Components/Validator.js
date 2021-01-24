@@ -1,5 +1,4 @@
 
-const ERROR_LIST = []
 
 function UserNameSpaceValidation(userName) {
     return !(userName.indexOf(' ') >= 0) ? [true] : [false, 'userName', 'User Name Cannot Have Spaces']

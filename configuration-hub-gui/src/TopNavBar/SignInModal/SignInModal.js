@@ -7,11 +7,7 @@ import SignInInformation from './Components/SignInInformation'
 import SignUpOption from './Components/SignUpOption'
 import './Style/SignInModalStyle.css'
 class SignInModal extends Component {
-    constructor(props) {
-        super(props)
-
-    }
-
+  
     render() {
         return (
             <Modal className="SignInModalMainDiv"

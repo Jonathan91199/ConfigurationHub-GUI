@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import TopNavBar from './TopNavBar/TopNavBar'
 import MainWindow from './MainWindow/MainWindow'

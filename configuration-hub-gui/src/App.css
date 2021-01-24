@@ -3,7 +3,7 @@
   background-image: url('.//160-1600491_autodesk-wallpaper-website-background.jpg');
   background-size: cover;
   background-repeat: round ;
-
+  overflow-x: auto;
   height: 100vh;
 }
 

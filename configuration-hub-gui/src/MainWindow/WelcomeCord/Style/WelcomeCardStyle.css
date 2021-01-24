@@ -1,12 +1,15 @@
 .WelcomeCardMainDiv {
-    margin-left: 30px;
+   
+    margin : 0px 50px;
     font-family: Nunito;
     font-weight: 700 !important;
     font-size: 20px;
     background: transparent !important;
     color: rgb(129, 168, 199);
 }
-
+.FirstCard {
+    border-bottom: 1px solid rgb(185, 224, 224) !important;
+}
 .WelcomeCard {
     background: rgba(20, 15, 15, 0.795) !important;
     backdrop-filter: saturate(140%) blur(40px) !important;
@@ -14,15 +17,15 @@
 
 .WelcomeCardTitle {
     font-weight: 800 !important;
-    font-size: 35px !important;
+    font-size: 60px !important;
 }
 
 .WelcomeCardSubTitle {
     font-weight: 800 !important;
-    font-size: 25px !important;
+    font-size: 40px !important;
     color: rgb(224, 64, 77) !important;
 }
-.ExplentaionCardHR{
+.BasicHR{
     border: 1px solid white;
 }
 

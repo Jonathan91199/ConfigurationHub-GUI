@@ -3,8 +3,7 @@ import { Row } from 'react-bootstrap'
 
 export default function Explentaion() {
     return (
-        <div className="ExplenationMainDiv">
-            <hr className="BasicHR"></hr>
+        <div className="ExplenationSecondDiv">
             <Row className="ExplenationRow">
                 ConfigurationHub is a free and open-source version control system designed for your system’s configuration files.
             </Row>

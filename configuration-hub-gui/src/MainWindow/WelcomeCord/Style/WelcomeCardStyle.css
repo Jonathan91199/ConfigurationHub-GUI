@@ -7,12 +7,11 @@
     background: transparent !important;
     color: rgb(129, 168, 199);
 }
-.withBorderCard {
-    border-bottom: 1px solid rgb(185, 224, 224) !important;
-}
+
 .WelcomeCard {
     background: rgba(20, 15, 15, 0.795) !important;
-    backdrop-filter: saturate(140%) blur(40px) !important;
+    backdrop-filter: saturate(150%) blur(40px) !important;
+
 }
 
 .WelcomeCardTitle {
@@ -25,12 +24,37 @@
     font-size: 40px !important;
     color: rgb(224, 64, 77) !important;
 }
+.WelcomeTitle {
+    font-weight: 800 !important;
+    font-size: 60px !important;
+    justify-content: center !important;
+}
+
+.WelcomeSubTitle {
+    font-weight: 800 !important;
+    font-size: 40px !important;
+    color: rgb(224, 64, 77) !important;
+    justify-content: center !important;
+
+}
+.WelcomeCol{
+    align-self: center !important;
+}
 .BasicHR{
     border: 1px solid white;
 }
 
 .ExplenationMainDiv {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin: 0px 0px 10px;
+    background: rgba(0, 0, 0, 0.178) !important;
+    backdrop-filter: saturate(140%) blur(15px) !important;
+}
+.ExplenationSecondDiv{
     text-align: left;
+    color: black;
+    font-size: 20px;
 }
 
 .ExplenationRow {

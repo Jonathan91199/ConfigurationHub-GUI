@@ -5,6 +5,8 @@ import WelcomeCard from './WelcomeCord/WelcomeCard'
 
 
 class MainWindow extends Component{
+   
+
     render(){
         return(
             <div className="MainWindowMainDiv">

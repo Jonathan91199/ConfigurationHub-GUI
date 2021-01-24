@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Component } from 'react';
-import { Card, Accordion } from 'react-bootstrap'
+import { Card, Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import '../Style/WelcomeCardStyle.css'
 import Explentaion from './Explenation'
@@ -24,24 +24,34 @@ class ExplenationCard extends Component {
     render() {
         return (
 
-            <Card style={{ width: '100%', minWidth: "40rem" }} className="WelcomeCard withBorderCard">
-                <Card.Body>
-                    <Card.Title className="WelcomeCardTitle">Welcome To ConfigurationHub</Card.Title>
-                    <Card.Subtitle className="WelcomeCardSubTitle mb-2">a REST API Configuration</Card.Subtitle>
-                    <Accordion.Toggle as={"span"} style={{ cursor: "pointer" }} variant="link" eventKey="0">
-                        Learn More !
-                          </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="0">
-                        <div>
-                            <Card.Text as="div">
-                                <Explentaion />
-                            </Card.Text>
-                            <Card.Link style={{ cursor: "pointer" }} onClick={() => { this.handleClick("SignIn") }}>Sign In</Card.Link>
-                            <Card.Link style={{ cursor: "pointer" }} onClick={() => { this.handleClick("SignUp") }}>Sign Up</Card.Link>
-                        </div>
-                    </Accordion.Collapse>
-                </Card.Body>
-            </Card>
+            <Col>
+                <Row className="ExplenationMainDiv">
+                    <Col className="WelcomeCol">
+                        <Row className="WelcomeTitle">
+                            Welcome To ConfigurationHub
+                        </Row>
+                        <Row className="WelcomeSubTitle">
+                            a REST API Configuration
+                        </Row>
+                    </Col>
+                    <Col xs={7}>
+                        <Explentaion />
+                    </Col>
+                </Row>
+
+            </Col>
+            // <Card style={{ width: '100%', minWidth: "40rem" }} className="WelcomeCard">
+            //     <Card.Body>
+            //         <Card.Title className="WelcomeCardTitle">Welcome To ConfigurationHub</Card.Title>
+            //         <Card.Subtitle className="WelcomeCardSubTitle mb-2">a REST API Configuration</Card.Subtitle>
+
+            //                 <Card.Text as="div">
+            //                     <Explentaion />
+            //                 </Card.Text>
+            //                 <Card.Link style={{ cursor: "pointer" }} onClick={() => { this.handleClick("SignIn") }}>Sign In</Card.Link>
+            //                 <Card.Link style={{ cursor: "pointer" }} onClick={() => { this.handleClick("SignUp") }}>Sign Up</Card.Link>
+            //     </Card.Body>
+            // </Card>
         )
     }
 }

@@ -24,7 +24,7 @@ class ExplenationCard extends Component {
     render() {
         return (
 
-            <Card style={{ width: '100%', minWidth: "40rem" }} className="WelcomeCard FirstCard">
+            <Card style={{ width: '100%', minWidth: "40rem" }} className="WelcomeCard withBorderCard">
                 <Card.Body>
                     <Card.Title className="WelcomeCardTitle">Welcome To ConfigurationHub</Card.Title>
                     <Card.Subtitle className="WelcomeCardSubTitle mb-2">a REST API Configuration</Card.Subtitle>

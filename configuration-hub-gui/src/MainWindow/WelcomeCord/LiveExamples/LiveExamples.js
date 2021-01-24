@@ -6,22 +6,21 @@ import { connect } from 'react-redux'
 import '../Style/WelcomeCardStyle.css'
 
 
-class QuickGuid extends Component {
+class LiveExamples extends Component {
     render() {
         return (
-            <Card style={{ width: '100%', minWidth: "40rem" }} className="WelcomeCard withBorderCard">
+            <Card style={{ width: '100%', minWidth: "40rem" }} className="WelcomeCard">
                 <Card.Body>
-                    <Card.Title className="WelcomeCardTitle">Quick Guide</Card.Title>
-                    <Card.Subtitle className="WelcomeCardSubTitle mb-2">Learn How To Use ConfigurationHub</Card.Subtitle>
-                    <Accordion.Toggle as={"span"} style={{ cursor: "pointer" }} variant="link" eventKey="2">
+                    <Card.Title className="WelcomeCardTitle">Live Examples</Card.Title>
+                    <Card.Subtitle className="WelcomeCardSubTitle mb-2">See Live Examples With ConfigurationHub Demo</Card.Subtitle>
+                    <Accordion.Toggle as={"span"} style={{ cursor: "pointer" }} variant="link" eventKey="3">
                         Click Here !
                           </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="2">
+                    <Accordion.Collapse eventKey="3">
                         <div>
                             <Card.Text as="div">
                             <hr className="BasicHR"></hr>
-
-                                Guide...
+                                Examples...
                             </Card.Text>
                         </div>
                     </Accordion.Collapse>
@@ -30,4 +29,4 @@ class QuickGuid extends Component {
         )
     }
 }
-export default connect(store => store.Main)(QuickGuid)
+export default connect(store => store.Main)(LiveExamples)

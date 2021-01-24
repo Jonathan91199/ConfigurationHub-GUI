@@ -4,6 +4,7 @@ import { Accordion } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import ExplenationCard from './ExplenationCard/ExplenatiionCard'
 import QuickGuid from './QuickGuide/QuickGuide'
+import LiveExamples from './LiveExamples/LiveExamples'
 import './Style/WelcomeCardStyle.css'
 
 
@@ -16,6 +17,7 @@ class WelcomeCard extends Component {
                 <Accordion defaultActiveKey="1">
                     <ExplenationCard/>
                     <QuickGuid/>
+                    <LiveExamples/>
                 </Accordion>
 
             </div>

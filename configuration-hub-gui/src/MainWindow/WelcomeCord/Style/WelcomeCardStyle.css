@@ -65,3 +65,7 @@
 .ExplenationListRow {
     margin-left: 30px !important;
 }
+.ExplenationMainCol{
+    /* margin-top: 10px; */
+    padding-top: 10px;
+}

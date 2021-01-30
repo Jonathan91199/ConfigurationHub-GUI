@@ -48,4 +48,11 @@ export function setUserConnectedInfo(value){
         value : value.value
     }
 }
+export function setSignedInState(value){
+    return {
+        type : "SET_SIGNED_IN_STATE",
+        value : value.value
+    }
+}
+
 

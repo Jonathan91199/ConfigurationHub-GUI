@@ -7,7 +7,7 @@ import SignInInformation from './Components/SignInInformation'
 import SignUpOption from './Components/SignUpOption'
 import './Style/SignInModalStyle.css'
 class SignInModal extends Component {
-  
+
     render() {
         return (
             <Modal className="SignInModalMainDiv"
@@ -23,6 +23,9 @@ class SignInModal extends Component {
 
                 </Modal.Header>
                 <Modal.Body>
+                    <div className="InvalidDataDiv">
+                        <span id="InvalidDataSpan"></span>
+                    </div>
                     <SignInInformation />
                 </Modal.Body>
 

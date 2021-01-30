@@ -1,20 +1,23 @@
 import React from 'react'
 import { Component } from 'react';
+import { connect } from 'react-redux'
+import { Container } from 'react-bootstrap'
 import './Style/MainWindowStyle.css'
 import WelcomeCard from './WelcomeCord/WelcomeCard'
+import SignedInMainWindow from './SignedInMainWindow/SignedInMainWindow'
 
 
-class MainWindow extends Component{
-   
+class MainWindow extends Component {
 
-    render(){
-        return(
-            <div className="MainWindowMainDiv">
-                <hr style={{border : "1px solid black"}}></hr>
-                <WelcomeCard/>
-            </div>
+
+    render() {
+        return (
+            
+                <Container fluid className="MainWindowMainDiv">
+                    {this.props.isUserConnected ? <SignedInMainWindow /> : <WelcomeCard />}
+                </Container>
         )
     }
 }
 
-export default MainWindow
+export default connect(store => store.Main)(MainWindow)

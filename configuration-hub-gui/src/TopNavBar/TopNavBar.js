@@ -20,7 +20,7 @@ class TopNavBar extends Component {
     }
     render() {
         let userSignIn = {
-            true: <UserConnectedInfo/>,
+            true: <UserConnectedInfo />,
             false: <SignInOption />
         }
 
@@ -31,18 +31,21 @@ class TopNavBar extends Component {
                 &nbsp;
             </div>
         return (
-            <div>
-                <Navbar className="MainNavbarStyle" expand="lg">
-                    <Navbar.Brand className="justify-content-center">{Name} </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                       
-                       {userSignIn[this.props.isUserConnected]}
-                    </Navbar.Collapse>
-                </Navbar>
-                <SignInModal />
-                <SignUpModal />
-            </div>
+
+                <div className="MainNavbarMainDiv">
+                    <Navbar className="MainNavbarStyle" expand="lg">
+                        <Navbar.Brand className="justify-content-center">{Name} </Navbar.Brand>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
+
+                            {userSignIn[this.props.isUserConnected]}
+                        </Navbar.Collapse>
+                    </Navbar>
+                    <SignInModal />
+                    <SignUpModal />
+
+                </div>
+
         )
     }
 }

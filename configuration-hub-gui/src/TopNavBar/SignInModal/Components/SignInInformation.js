@@ -38,14 +38,19 @@ class SignInInformation extends Component {
                 _.props.dispatch(setIsUserConnected({ value: true }))
                
 
-            }).catch(err => {
+            }).catch(err => { 
                 this.setState({ loadingSpinner: false })
-                NotificationManager.error(err.message, 'Error')
+                // NotificationManager.error(err.message, 'Error')
+                err.response.status === 400 ? this.triggerInvalidData() : NotificationManager.error(err.message)
             })
         }, 1000)
 
     }
 
+
+    triggerInvalidData(){
+        document.getElementById("InvalidDataSpan").innerHTML ="*User Name Or Password Incorrect"
+    }
 
 
     handleValidationError(errorList) {

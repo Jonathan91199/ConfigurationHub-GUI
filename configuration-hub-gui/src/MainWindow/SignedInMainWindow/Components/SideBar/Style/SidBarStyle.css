@@ -1,0 +1,23 @@
+.SideBarComponentHOCSpan {
+    /* color: aqua; */
+    font-size: 25px;
+    font-family: Nunito;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.SideBarComponentDiv {
+    margin: 30px 0px;
+}
+.SideBarHR{
+    border: 1px solid black;
+    
+}
+
+.SideBarComponentDiv:hover {
+    color: rgba(233, 127, 145, 0.733) !important;
+}
+.SideBarComponentDiv:active {
+    color: rgba(231, 79, 104, 0.733) !important;
+}

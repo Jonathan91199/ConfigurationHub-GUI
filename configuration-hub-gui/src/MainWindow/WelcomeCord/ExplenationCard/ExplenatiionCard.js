@@ -24,7 +24,7 @@ class ExplenationCard extends Component {
     render() {
         return (
 
-            <Col>
+            <Col className="ExplenationMainCol">
                 <Row className="ExplenationMainDiv">
                     <Col className="WelcomeCol">
                         <Row className="WelcomeTitle">
@@ -40,18 +40,7 @@ class ExplenationCard extends Component {
                 </Row>
 
             </Col>
-            // <Card style={{ width: '100%', minWidth: "40rem" }} className="WelcomeCard">
-            //     <Card.Body>
-            //         <Card.Title className="WelcomeCardTitle">Welcome To ConfigurationHub</Card.Title>
-            //         <Card.Subtitle className="WelcomeCardSubTitle mb-2">a REST API Configuration</Card.Subtitle>
-
-            //                 <Card.Text as="div">
-            //                     <Explentaion />
-            //                 </Card.Text>
-            //                 <Card.Link style={{ cursor: "pointer" }} onClick={() => { this.handleClick("SignIn") }}>Sign In</Card.Link>
-            //                 <Card.Link style={{ cursor: "pointer" }} onClick={() => { this.handleClick("SignUp") }}>Sign Up</Card.Link>
-            //     </Card.Body>
-            // </Card>
+           
         )
     }
 }

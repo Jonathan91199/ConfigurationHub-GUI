@@ -10,7 +10,9 @@ const defultState = {
     SignUpExplenation : 'info',
 
     isUserConnected : false,
-    userConnectedInfo : null
+    userConnectedInfo : null,
+
+    signInState : "My Configurations"
     
 
 }
@@ -67,6 +69,13 @@ export default function MainReducer( state = defultState , action) {
             return {
                 ...state,
                 SignUpExplenation : action.value
+            }
+        }
+
+        case 'SET_SIGNED_IN_STATE' : {
+            return {
+                ...state,
+                signInState : action.value
             }
         }
         

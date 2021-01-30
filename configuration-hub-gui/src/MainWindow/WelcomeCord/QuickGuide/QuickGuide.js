@@ -13,18 +13,8 @@ class QuickGuid extends Component {
                 <Card.Body>
                     <Card.Title className="WelcomeCardTitle">Quick Guide</Card.Title>
                     <Card.Subtitle className="WelcomeCardSubTitle mb-2">Learn How To Use ConfigurationHub</Card.Subtitle>
-                    <Accordion.Toggle as={"span"} style={{ cursor: "pointer" }} variant="link" eventKey="2">
-                        Click Here !
-                          </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="2">
-                        <div>
-                            <Card.Text as="div">
-                            <hr className="BasicHR"></hr>
-
-                                Guide...
-                            </Card.Text>
-                        </div>
-                    </Accordion.Collapse>
+                    <span style={{cursor : "pointer"}}>Click Here !</span>
+                    
                 </Card.Body>
             </Card>
         )

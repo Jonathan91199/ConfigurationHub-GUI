@@ -21,3 +21,10 @@
     backdrop-filter: saturate(140%) blur(40px) !important;
     
 }
+.InvalidDataDiv{
+    text-align: center;
+    color: red;
+    font-size: 25px;
+    font-family: Nunito;
+    font-weight: 800;
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Component } from 'react';
-import { Accordion, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import ExplenationCard from './ExplenationCard/ExplenatiionCard'
 import QuickGuid from './QuickGuide/QuickGuide'
@@ -14,20 +14,19 @@ class WelcomeCard extends Component {
     render() {
         return (
             <div className="WelcomeCardMainDiv">
-                <ExplenationCard />
-                <Row>
-                    <Col>
-                        <Accordion className="accordionStyle" defaultActiveKey="1">
-                            <QuickGuid />
-                        </Accordion>
-                    </Col>
-                    <Col>
-                        <Accordion className="accordionStyle" defaultActiveKey="1">
-                            <LiveExamples />
-                        </Accordion>
-                    </Col>
-                </Row>
+                <Container fluid>
 
+                    <ExplenationCard />
+                    <Row>
+                        <Col>
+                            <QuickGuid />
+                        </Col>
+                        <Col>
+                            <LiveExamples />
+                        </Col>
+                    </Row>
+
+                </Container>
             </div>
         )
     }

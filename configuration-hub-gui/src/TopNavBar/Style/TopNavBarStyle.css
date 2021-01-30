@@ -18,3 +18,42 @@
     font-family: Nunito;
 }
 
+.MainNavbarMainDiv{
+    height: 10%;
+    border-bottom: 1px solid black;
+    display: grid;
+    /* border-bottom: 1px soslid black; */
+}
+@media screen and (max-width: 1000px) {
+    .logoName {
+       font-size: 30px;
+       /* background-color: aqua !important; */
+    }
+    .logoPic {
+        width: 60px;
+        margin-top: -10px;
+        /* height: 40px; */
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .logoName {
+       font-size: 20px;
+       /* background-color: aqua !important; */
+    }
+    .logoPic {
+        width: 40px;
+        margin-top: -2px;
+        /* height: 40px; */
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .logoName {
+       font-size: 10px;
+       /* background-color: aqua !important; */
+    }
+    .logoPic {
+        width: 20px;
+        margin-top: 0px;
+        /* height: 40px; */
+    }
+  }

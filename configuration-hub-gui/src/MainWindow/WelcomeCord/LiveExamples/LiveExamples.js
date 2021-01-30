@@ -13,17 +13,7 @@ class LiveExamples extends Component {
                 <Card.Body>
                     <Card.Title className="WelcomeCardTitle">Live Examples</Card.Title>
                     <Card.Subtitle className="WelcomeCardSubTitle mb-2">Play With ConfigurationHub Demo Examples</Card.Subtitle>
-                    <Accordion.Toggle as={"span"} style={{ cursor: "pointer" }} variant="link" eventKey="3">
-                        Click Here !
-                          </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="3">
-                        <div>
-                            <Card.Text as="div">
-                            <hr className="BasicHR"></hr>
-                                Examples...
-                            </Card.Text>
-                        </div>
-                    </Accordion.Collapse>
+                    <span style={{cursor : "pointer"}}>Click Here !</span>
                 </Card.Body>
             </Card>
         )

@@ -7,11 +7,11 @@ class SideBar extends Component {
             <div>
 
                 <div className="SideBarComponentDiv">
-                    <SideBarComponentHOC Name="My Configurations" />
+                    <SideBarComponentHOC Name="My Systems" />
                 </div>
                 <hr className="SideBarHR"></hr>
                 <div className="SideBarComponentDiv LastComponent">
-                    <SideBarComponentHOC Name="New Configuration" />
+                    <SideBarComponentHOC Name="New System" />
                 </div>
                 
 

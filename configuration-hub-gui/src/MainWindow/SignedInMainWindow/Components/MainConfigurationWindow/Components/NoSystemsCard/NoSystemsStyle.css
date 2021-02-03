@@ -1,0 +1,39 @@
+.NoConfigurationCardDiv{
+    text-align: -webkit-center;
+    padding-top: 5%;
+    font-family: Nunito;
+}
+.NoConfigurationCardDiv .card  {
+    background: rgba(0, 0, 0, 0.589) !important;
+    backdrop-filter: saturate(100%) blur(40px) !important;
+    color: blanchedalmond;
+    border: 2px solid red !important;
+    border-radius: 30px !important;
+}
+.NoConfigurationClickHere{
+    cursor: pointer;
+    user-select: none;
+    font-size: 25px;
+
+}
+.NoConfigurationClickHereDiv :hover{
+    color: rgb(15, 5, 73) !important;
+    font-weight: 800;
+}
+.NoConfigurationClickHereDiv :active{
+    color: rgb(5, 2, 26) !important;
+    font-weight: 800;
+}
+.NoConfigurationCardMain{
+    width: 30rem;
+    font-size: 30px;
+}
+.NoConfigurationCardHeader{
+    font-size: 70px;
+}
+.NoConfigurationCardTitle{
+    font-size: 30px !important;
+}
+.NoConfigurationCardText{
+    font-size: 20px !important;
+}

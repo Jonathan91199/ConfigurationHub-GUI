@@ -54,5 +54,24 @@ export function setSignedInState(value){
         value : value.value
     }
 }
+export function setAllSystems(value){
+    return {
+        type : "SET_ALL_SYSTEMS",
+        value : value.value
+    }
+}
+export function setSelectedSystemId(value){
+    return {
+        type : 'SET_SELECTED_SYSTEM_ID',
+        value : value.value
+    }
+}
+export function setSystemState(value){
+    return {
+        type : 'SET_SYSTEM_STATE',
+        value : value.value
+    }
+}
+
 
 

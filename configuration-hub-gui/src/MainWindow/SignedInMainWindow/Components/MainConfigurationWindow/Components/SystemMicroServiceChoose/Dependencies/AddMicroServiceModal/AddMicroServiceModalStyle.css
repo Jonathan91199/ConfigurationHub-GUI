@@ -1,0 +1,53 @@
+.AddMsModalMain .modal-dialog .modal-content {
+    background: transparent !important;
+    backdrop-filter: saturate(100%) blur(10px) !important;
+    margin-top: 150px;
+}
+
+.AddMsModalHeader {
+    justify-content: center !important;
+    font-family: Nunito !important;
+    color: white;
+}
+
+.AddMsModalTitle {
+    font-size: 40px !important;
+}
+
+.AddMsModalBody {}
+
+.AddMsModalBodyRow{
+    justify-content: center;
+}
+.AddMsModalBodyCol{
+    width: 400px !important;
+}
+#MicroServiceForm{
+    font-size: 2rem !important;
+    text-align: center;
+}
+.AddMsModalFooter {
+    justify-content: center !important;
+}
+.AddMicroServiceButton{
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.411);
+    border-radius: 40px;
+    padding: 2px 10px;
+    user-select: none;
+    color: rgb(201, 184, 184);
+
+}
+.AddMsCircleOutlineIcon{
+    font-size: 30px !important;
+    color: rgb(201, 184, 184);
+}
+.AddMsModalFooter :hover{
+    background-color: rgb(10, 63, 65);
+    color: rgb(201, 184, 184);
+}
+.AddMsModalFooter :active{
+    background-color: rgb(2, 33, 34);
+
+}

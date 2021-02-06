@@ -78,6 +78,12 @@ export function setSelectedSystem(value){
         value : value.value
     }
 }
+export function setMicroServiceModalState(value){
+    return {
+        type : 'SET_MS_MODAL_STATE',
+        value : value.value
+    }
+}
 
 
 

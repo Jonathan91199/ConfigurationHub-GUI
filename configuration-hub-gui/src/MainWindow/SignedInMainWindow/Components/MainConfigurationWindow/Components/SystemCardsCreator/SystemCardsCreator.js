@@ -21,7 +21,7 @@ class SystemCardsCreator extends Component {
         this.props.dispatch(setSelectedSystemId({ value: system.id }))
         this.props.dispatch(setSystemState({ value: "ChooseMicroService" }))
         this.props.PullSingleSystem(system.id)
-        this.props.callBack()
+        this.props.callBack(system)
 
     }
 

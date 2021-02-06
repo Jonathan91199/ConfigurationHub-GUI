@@ -4,7 +4,9 @@ import { connect } from 'react-redux'
 import { Row } from 'react-bootstrap'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import SystemRowCreator from '../SystemCardsCreator/Dependencies/SystemRowsCreator'
-import { setSystemState } from '../../../../../../Actions/MainReducerAction'
+import { setSystemState, setMicroServiceModalState } from '../../../../../../Actions/MainReducerAction'
+import AddMicroServiceModal from './Dependencies/AddMicroServiceModal/AddMicroServiceModal'
+import PullSystemById from './Dependencies/PullSystemById'
 import './Style/SystemMicroServiceStyle.css'
 
 class SystemMicroServiceChoose extends Component {
@@ -12,12 +14,22 @@ class SystemMicroServiceChoose extends Component {
         super(props)
         this.handleClick = this.handleClick.bind(this)
         this.handleGoBackClick = this.handleGoBackClick.bind(this)
+        this.handleAddMsClick = this.handleAddMsClick.bind(this)
+        this.handleActiveAddMsClick = this.handleActiveAddMsClick.bind(this)
     }
     handleClick(microService) {
         console.log(microService)
+        console.log(this.props.system)
     }
     handleGoBackClick() {
         this.props.dispatch(setSystemState({ value: "ChooseSystem" }))
+    }
+    handleAddMsClick() {
+
+    }
+    handleActiveAddMsClick(){
+        PullSystemById(this.props.system.id, this)
+        this.forceUpdate()
     }
 
     render() {
@@ -36,10 +48,11 @@ class SystemMicroServiceChoose extends Component {
                     {microServiceOptions}
 
                 </div>
-                <Row className="AddNewMsRow">
+                <Row className="AddNewMsRow" onClick={() => this.props.dispatch(setMicroServiceModalState({ value: true }))}>
                     <i class="bi bi-file-earmark-plus"> Add Micro Service</i>
                 </Row>
-            </div>
+                <AddMicroServiceModal system={this.props.system} callBack={() => this.handleActiveAddMsClick()}/>
+            </div >
         )
     }
 }

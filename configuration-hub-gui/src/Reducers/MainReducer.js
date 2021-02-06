@@ -16,6 +16,7 @@ const defultState = {
     selectedSystem : null,
     selectedSystemId : null,
     SystemState : "ChooseSystem",
+    microServiceModalState : false,
 
     signInState : "My Configurations"
     
@@ -105,6 +106,12 @@ export default function MainReducer( state = defultState , action) {
             return {
                 ...state,
                 selectedSystem : action.value
+            }
+        }
+        case 'SET_MS_MODAL_STATE' : {
+            return {
+                ...state, 
+                microServiceModalState : action.value
             }
         }
         

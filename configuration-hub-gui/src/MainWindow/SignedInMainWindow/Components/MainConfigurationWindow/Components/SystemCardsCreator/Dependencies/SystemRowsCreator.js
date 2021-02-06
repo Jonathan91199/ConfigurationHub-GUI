@@ -2,13 +2,13 @@ import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 
 
-export default function SystemRowCreator(that, optionArr, NumberOfRows) {
+export default function SystemRowCreator(that, optionArr, NumberOfCols) {
     let cols = []
-    for (let rowNum = 0; rowNum < Math.floor(((optionArr.length) / NumberOfRows)) + 1; rowNum++) {
+    for (let rowNum = 0; rowNum < Math.floor(((optionArr.length) / NumberOfCols)) + 1; rowNum++) {
         cols[rowNum] = []
-        for (let colNum = 0; colNum < NumberOfRows; colNum++) {
-            let system = optionArr[(rowNum * NumberOfRows + colNum)]
-            if (optionArr[(rowNum * NumberOfRows + colNum)] !== undefined) {
+        for (let colNum = 0; colNum < NumberOfCols; colNum++) {
+            let system = optionArr[(rowNum * NumberOfCols + colNum)]
+            if (optionArr[(rowNum * NumberOfCols + colNum)] !== undefined) {
                 cols[rowNum][colNum] =
                     <Col className="RowCreatorColMainDiv" onClick={() => that.handleClick(system)}>
                         <div className="RowCreatorCol" >{system.name}</div>

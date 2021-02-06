@@ -5,7 +5,7 @@
 }
 .BackToSystemsButtonRow{
     padding-top: 10px;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 .BackToSystemsButtonRow :hover{
     background-color: rgba(216, 33, 33, 0.678);
@@ -25,3 +25,31 @@
     background-color: rgba(223, 50, 50, 0.678);
 
 }
+.AddNewMsRow .bi-file-earmark-plus{
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 10px 20px;
+    cursor: pointer;
+    user-select: none;
+    background-color: rgba(76, 139, 68, 0.952);
+
+}
+.AddNewMsRow{
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    bottom: 5%;
+   
+}
+.AddNewMsRow  :hover{
+    background-color: rgb(32, 139, 18);
+    border: 1px solid rgb(19, 85, 11);
+
+}
+.AddNewMsRow  :active{
+    background-color: rgb(19, 85, 11);
+    border: 1px solid rgb(19, 85, 11);
+
+}
+

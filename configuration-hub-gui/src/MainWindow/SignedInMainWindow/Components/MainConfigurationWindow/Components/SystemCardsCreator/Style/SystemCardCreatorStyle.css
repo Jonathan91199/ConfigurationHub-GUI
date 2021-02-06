@@ -1,6 +1,9 @@
 .RowCreatorRow{
-    margin: 20px !important;
+    margin: 20px 20px 20px 0px !important;
     
+}
+.EmptyCol{
+    padding-right: 0px !important;
 }
 .RowCreatorCol{
     margin: 0px 3px;
@@ -11,6 +14,9 @@
     padding: 10px;
     font-family: Nunito;
 
+}
+.RowCreatorColMainDiv{
+    padding-left: 0px !important;
 }
 
 .RowCreatorColMainDiv :hover{

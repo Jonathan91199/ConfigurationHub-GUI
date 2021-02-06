@@ -25,13 +25,20 @@ class SystemMicroServiceChoose extends Component {
         let microServiceOptions = SystemRowCreator(this, microServices, 4)
         return (
             <div>
-                <Row className="BackToSystemsButtonRow" >
-                    <div className="BackToSystemsButtonDiv" onClick={() => this.handleGoBackClick()}>
-                        <ArrowBackIcon className="BackToSystemsButton" />
+
+                <div>
+                    <Row className="BackToSystemsButtonRow" >
+                        <div className="BackToSystemsButtonDiv" onClick={() => this.handleGoBackClick()}>
+                            <ArrowBackIcon className="BackToSystemsButton" />
                         &nbsp; Go Back &nbsp;
                     </div>
+                    </Row>
+                    {microServiceOptions}
+
+                </div>
+                <Row className="AddNewMsRow">
+                    <i class="bi bi-file-earmark-plus"> Add Micro Service</i>
                 </Row>
-                {microServiceOptions}
             </div>
         )
     }

@@ -28,5 +28,4 @@ export default function SystemRowCreator(that, optionArr, NumberOfRows) {
 
     }
     return AllSystems
-    // that.setState({ AllSystemsState: AllSystems, PageState: "ChooseSystem" })
 }

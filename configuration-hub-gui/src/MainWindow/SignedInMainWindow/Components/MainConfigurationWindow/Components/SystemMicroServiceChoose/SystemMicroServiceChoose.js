@@ -18,7 +18,6 @@ class SystemMicroServiceChoose extends Component {
     }
     handleGoBackClick() {
         this.props.dispatch(setSystemState({ value: "ChooseSystem" }))
-
     }
 
     render() {
@@ -26,8 +25,8 @@ class SystemMicroServiceChoose extends Component {
         let microServiceOptions = SystemRowCreator(this, microServices, 4)
         return (
             <div>
-                <Row className="BackToSystemsButtonRow" onClick={() => this.handleGoBackClick()}>
-                    <div className="BackToSystemsButtonDiv">
+                <Row className="BackToSystemsButtonRow" >
+                    <div className="BackToSystemsButtonDiv" onClick={() => this.handleGoBackClick()}>
                         <ArrowBackIcon className="BackToSystemsButton" />
                         &nbsp; Go Back &nbsp;
                     </div>

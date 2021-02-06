@@ -1,0 +1,27 @@
+.BackToSystemsButton{
+    font-size: 40px !important;
+    background-color: transparent !important;
+
+}
+.BackToSystemsButtonRow{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.BackToSystemsButtonRow :hover{
+    background-color: rgba(216, 33, 33, 0.678);
+}
+.BackToSystemsButtonRow :active{
+    background-color: rgba(216, 4, 4, 0.678);
+}
+.BackToSystemsButtonDiv{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 5px;
+    font-size: 25px;
+    font-family: Nunito;
+    font-weight: 800;
+    user-select: none;
+    cursor: pointer;
+    background-color: rgba(223, 50, 50, 0.678);
+
+}

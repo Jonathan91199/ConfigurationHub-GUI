@@ -13,8 +13,9 @@ const defultState = {
     userConnectedInfo : null,
     
     allSystems : [],
+    selectedSystem : null,
     selectedSystemId : null,
-    setSystemState : "ChooseSystem",
+    SystemState : "ChooseSystem",
 
     signInState : "My Configurations"
     
@@ -97,7 +98,13 @@ export default function MainReducer( state = defultState , action) {
         case 'SET_SYSTEM_STATE' : {
             return {
                 ...state,
-                setSystemState : action.value
+                SystemState : action.value
+            }
+        }
+        case 'SET_SELECTED_SYSTEM' : {
+            return {
+                ...state,
+                selectedSystem : action.value
             }
         }
         

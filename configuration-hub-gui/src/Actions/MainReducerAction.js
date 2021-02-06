@@ -72,6 +72,12 @@ export function setSystemState(value){
         value : value.value
     }
 }
+export function setSelectedSystem(value){
+    return {
+        type : 'SET_SELECTED_SYSTEM',
+        value : value.value
+    }
+}
 
 
 

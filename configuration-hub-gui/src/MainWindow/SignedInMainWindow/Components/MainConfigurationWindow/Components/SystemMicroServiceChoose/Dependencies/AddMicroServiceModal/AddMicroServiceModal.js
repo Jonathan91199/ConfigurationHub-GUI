@@ -17,11 +17,9 @@ class AddMicroServiceModal extends Component {
         let name = document.getElementById('MicroServiceForm').value
         let _ = this
         Axios.post(`http://localhost:51241/api/Microservices`, {
-
             "name": name,
             "system": {
                 "id": _.props.system.id
-
             }
         }, {
             headers: {

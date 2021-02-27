@@ -15,6 +15,8 @@ const defultState = {
     allSystems : [],
     selectedSystem : null,
     selectedSystemId : null,
+    selectedMicroService : null,
+    configData : null,
     SystemState : "ChooseSystem",
     microServiceModalState : false,
 
@@ -106,6 +108,18 @@ export default function MainReducer( state = defultState , action) {
             return {
                 ...state,
                 selectedSystem : action.value
+            }
+        }
+        case 'SET_SELECTED_MS' : {
+            return { 
+                ...state, 
+                selectedMicroService : action.value
+            }
+        }
+        case 'SET_SELECTED_DATA' : {
+            return {
+                ...state,
+                configData : action.value
             }
         }
         case 'SET_MS_MODAL_STATE' : {

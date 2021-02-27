@@ -78,6 +78,18 @@ export function setSelectedSystem(value){
         value : value.value
     }
 }
+export function setSelectedMicroService(value){
+    return {
+        type : 'SET_SELECTED_MS',
+        value : value.value
+    }
+}
+export function setConfigData(value){
+    return {
+        type : 'SET_SELECTED_DATA',
+        value : value.value
+    }
+}
 export function setMicroServiceModalState(value){
     return {
         type : 'SET_MS_MODAL_STATE',

@@ -6,6 +6,7 @@ import { NotificationContainer } from 'react-notifications'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/react-notifications/lib/notifications.css'
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
+import '../node_modules/jsoneditor/dist/jsoneditor.min.css'
 
 
 class App extends React.Component {

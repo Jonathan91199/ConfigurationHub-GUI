@@ -1,0 +1,23 @@
+#jsoneditor{
+    margin-top: 10px;
+}
+.jsoneditor-menu{
+    background-color: rgba(16, 56, 56, 0.897) !important;
+}
+
+.jsoneditor-popover, .jsoneditor-schema-error, div.jsoneditor td, div.jsoneditor textarea, div.jsoneditor th, div.jsoneditor-field, div.jsoneditor-value, pre.jsoneditor-preview{
+    background-color :cadetblue;
+
+}
+.jsoneditor-field{
+    font-size: 1.5rem !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+.jsoneditor-value{
+    font-size: 1.5rem !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+
+}
+.jsoneditor-values{
+    margin: 5px;
+}

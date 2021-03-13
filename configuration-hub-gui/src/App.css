@@ -7,6 +7,15 @@
   height: 100vh;
 }
 
+#MainAppContainer{
+  /* height: 100%; */
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  margin-right: 0px !important;
+  margin-left:  0px !important;
+  
+}
+
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;

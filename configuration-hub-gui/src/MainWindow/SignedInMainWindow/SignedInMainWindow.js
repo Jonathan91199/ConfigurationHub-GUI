@@ -11,9 +11,6 @@ class SignedInMainWindow extends Component {
     render() {
         return (
             <Row className="SignedInMainWindowMainRow">
-                <Col className="SignedInMainWindowMainCol">
-                    <SideBar />
-                </Col>
                 <Col>
                     <MainConfigurationWindow />
                 </Col>

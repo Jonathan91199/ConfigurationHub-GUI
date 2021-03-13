@@ -7,6 +7,7 @@ import SystemCardsCreator from './Components/SystemCardsCreator/SystemCardsCreat
 import PullSystemById from './Components/SystemMicroServiceChoose/Dependencies/PullSystemById'
 import SystemMicroServiceChoose from './Components/SystemMicroServiceChoose/SystemMicroServiceChoose'
 import MicroServiceConfig from './Components/MicroServiceConfig/MicroServiceConfig'
+import BasicLoader from './Components/BasicLoader/BasicLoader'
 
 class MainConfigurationWindow extends Component {
     constructor(props) {
@@ -24,11 +25,13 @@ class MainConfigurationWindow extends Component {
 
     render() {
         let SystemState = {
+            "BasicLoader" : <BasicLoader/>,
+            "NoSystemCard" : <NoSystemsCard/>,
             "ChooseSystem": <SystemCardsCreator callBack={(system) => this.setState({choosenSystem : system})} PullSingleSystem={(id) => PullSystemById(id, this)} />,
             "ChooseMicroService": <SystemMicroServiceChoose callBack={() => this.forceUpdate()} system={this.state.choosenSystem} />,
             "ShowMircoServiceConfig" : <MicroServiceConfig/>
         }
-        return this.props.allSystems.length === 0 ? <NoSystemsCard /> : SystemState[this.props.SystemState]
+        return SystemState[this.props.SystemState]
     }
 }
 

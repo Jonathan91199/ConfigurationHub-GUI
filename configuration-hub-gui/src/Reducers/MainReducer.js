@@ -17,7 +17,7 @@ const defultState = {
     selectedSystemId : null,
     selectedMicroService : null,
     configData : null,
-    SystemState : "ChooseSystem",
+    SystemState : "BasicLoader",
     microServiceModalState : false,
 
     signInState : "My Configurations"

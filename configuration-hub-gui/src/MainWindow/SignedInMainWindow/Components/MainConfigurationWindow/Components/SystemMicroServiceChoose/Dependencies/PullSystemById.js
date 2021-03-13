@@ -1,6 +1,6 @@
 import Axios from 'axios'
 import { NotificationManager } from 'react-notifications'
-import { setSelectedSystem } from '../../../../../../../Actions/MainReducerAction'
+import { setSelectedSystem, setSystemState } from '../../../../../../../Actions/MainReducerAction'
 
 export default function PullSystemById(id, that) {
     console.log(id)
@@ -11,6 +11,7 @@ export default function PullSystemById(id, that) {
         }
     }).then(res => {
         that.props.dispatch(setSelectedSystem ({value : res.data}))
+        that.props.dispatch(setSystemState({value : "ChooseMicroService"}))
 
     }).catch(err => {
         NotificationManager.error(err.message, 'Error')

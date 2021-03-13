@@ -1,23 +1,63 @@
-#jsoneditor{
+#jsoneditor {
     margin-top: 10px;
 }
-.jsoneditor-menu{
+
+.jsoneditor-menu {
     background-color: rgba(16, 56, 56, 0.897) !important;
 }
 
-.jsoneditor-popover, .jsoneditor-schema-error, div.jsoneditor td, div.jsoneditor textarea, div.jsoneditor th, div.jsoneditor-field, div.jsoneditor-value, pre.jsoneditor-preview{
-    background-color :cadetblue;
-
+.jsoneditor-popover, .jsoneditor-schema-error, div.jsoneditor td, div.jsoneditor textarea, div.jsoneditor th, div.jsoneditor-field, div.jsoneditor-value, pre.jsoneditor-preview {
+    background-color: cadetblue;
 }
-.jsoneditor-field{
+
+.jsoneditor-field {
     font-size: 1.5rem !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
-.jsoneditor-value{
+
+.jsoneditor-value {
     font-size: 1.5rem !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-
 }
-.jsoneditor-values{
+
+.jsoneditor-values {
     margin: 5px;
+}
+
+.SaveConfigurationButton {
+    margin-top: 1%;
+}
+
+.SaveConfigurationButtonDiv {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.SaveConfigurationIcon {
+    font-size: 1.5rem !important;
+}
+
+.backToMsChoosingArrowDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.backToMsChoosingArrow {
+    font-size: 2rem !important;
+    border: 2.5px solid #343a40;
+    border-radius: 30px;
+    margin-top: 1%;
+}
+
+.backToMsChoosingArrowDiv :hover {
+    cursor: pointer !important;
+    background-color:  #343a40;
+    color: blanchedalmond;
+
+}
+.backToMsChoosingArrowDiv :active{
+    background-color:  #24282c;
+
 }

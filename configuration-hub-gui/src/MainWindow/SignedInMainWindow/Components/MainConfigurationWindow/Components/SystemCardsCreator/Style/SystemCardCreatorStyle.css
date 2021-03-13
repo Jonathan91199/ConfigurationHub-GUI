@@ -1,30 +1,66 @@
-.RowCreatorRow{
+.RowCreatorRow {
     margin: 20px 20px 20px 0px !important;
-    
 }
-.EmptyCol{
+
+.EmptyCol {
     padding-right: 0px !important;
 }
-.RowCreatorCol{
+
+.RowCreatorColName {
     margin: 0px 3px;
     border: 1px solid black;
     border-radius: 15px;
-    background-color: rgba(205, 255, 248, 0.644) ;
+    background-color: rgba(205, 255, 248, 0.644);
     font-size: 40px;
     padding: 10px;
     font-family: Nunito;
-
 }
-.RowCreatorColMainDiv{
+
+.RowCreatorColMainDiv  {
     padding-left: 0px !important;
 }
 
-.RowCreatorColMainDiv :hover{
-    background-color: rgba(128, 128, 204, 0.63) ;
+.RowCreatorColFirstDiv  :hover {
+    background-color: rgba(128, 128, 204, 0.63);
     cursor: pointer;
     user-select: none;
 }
-.RowCreatorColMainDiv :active{
-    background-color: rgba(74, 74, 192, 0.63) ;
+
+.RowCreatorColFirstDiv :active {
+    background-color: rgba(74, 74, 192, 0.63);
     color: white;
+}
+.RowCreatorColSecondDiv :hover{
+    background-color: rgb(230, 85, 85);
+    cursor: pointer;
+    user-select: none;
+}
+.RowCreatorColSecondDiv :active{
+    background-color: rgb(230, 35, 35);
+}
+
+
+.DeleteSystemIcon {
+    font-size: 2rem !important;
+    background-color: rgb(233, 120, 120);
+    border: 1px solid rgb(233, 120, 120);
+    border-radius: 100%;
+    padding: 3px;
+    position: absolute;
+    top: -5%;
+    right:10px;
+    z-index: 1000;
+}
+.SystemOptionsMainDiv{
+    position: absolute;
+    display: flex;
+    
+}
+.SystemOptionsButton{
+    margin: 5px;
+    padding: 15px !important;
+
+}
+.SystemOptionsIcon{
+    font-size: 3rem !important;
 }

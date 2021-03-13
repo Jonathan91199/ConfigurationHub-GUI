@@ -4,15 +4,9 @@
 
 }
 .BackToSystemsButtonRow{
-    padding-top: 10px;
     padding-left: 20px;
 }
-.BackToSystemsButtonRow :hover{
-    background-color: rgba(216, 33, 33, 0.678);
-}
-.BackToSystemsButtonRow :active{
-    background-color: rgba(216, 4, 4, 0.678);
-}
+
 .BackToSystemsButtonDiv{
     border: 1px solid black;
     border-radius: 20px;

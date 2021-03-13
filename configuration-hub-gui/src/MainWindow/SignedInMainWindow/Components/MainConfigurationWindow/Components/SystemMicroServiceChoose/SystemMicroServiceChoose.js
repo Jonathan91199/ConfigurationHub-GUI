@@ -15,14 +15,18 @@ class SystemMicroServiceChoose extends Component {
         this.handleClick = this.handleClick.bind(this)
         this.handleGoBackClick = this.handleGoBackClick.bind(this)
         this.handleAddMsClick = this.handleAddMsClick.bind(this)
+        this.handleDeleteClick = this.handleDeleteClick.bind(this)
         this.handleActiveAddMsClick = this.handleActiveAddMsClick.bind(this)
     }
     handleClick(microService) {
         console.log(microService)
         console.log(this.props.system)
-        this.props.dispatch(setSelectedMicroService({value : microService}))
+        this.props.dispatch(setSelectedMicroService({ value: microService }))
         this.props.dispatch(setSystemState({ value: "ShowMircoServiceConfig" }))
 
+    }
+    handleDeleteClick(microService){
+        
     }
     handleGoBackClick() {
         this.props.dispatch(setSystemState({ value: "ChooseSystem" }))
@@ -43,10 +47,9 @@ class SystemMicroServiceChoose extends Component {
 
                 <div>
                     <Row className="BackToSystemsButtonRow" >
-                        <div className="BackToSystemsButtonDiv" onClick={() => this.handleGoBackClick()}>
-                            <ArrowBackIcon className="BackToSystemsButton" />
-                        &nbsp; Go Back &nbsp;
-                    </div>
+                        <div className="backToMsChoosingArrowDiv">
+                            <ArrowBackIcon className="backToMsChoosingArrow" onClick={this.handleGoBackClick} />
+                        </div>
                     </Row>
                     {microServiceOptions}
 

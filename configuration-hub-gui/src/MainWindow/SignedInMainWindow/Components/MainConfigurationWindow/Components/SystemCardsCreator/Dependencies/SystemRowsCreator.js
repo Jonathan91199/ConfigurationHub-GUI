@@ -1,8 +1,9 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
+import DeleteIcon from '@material-ui/icons/Delete';
 
+export default function SystemRowCreator(that, optionArr, NumberOfCols, showDeleteIcon) {
 
-export default function SystemRowCreator(that, optionArr, NumberOfCols) {
     let cols = []
     for (let rowNum = 0; rowNum < Math.floor(((optionArr.length) / NumberOfCols)) + 1; rowNum++) {
         cols[rowNum] = []
@@ -10,8 +11,22 @@ export default function SystemRowCreator(that, optionArr, NumberOfCols) {
             let system = optionArr[(rowNum * NumberOfCols + colNum)]
             if (optionArr[(rowNum * NumberOfCols + colNum)] !== undefined) {
                 cols[rowNum][colNum] =
-                    <Col className="RowCreatorColMainDiv" onClick={() => that.handleClick(system)}>
-                        <div className="RowCreatorCol" >{system.name}</div>
+                    <Col className="RowCreatorColMainDiv" >
+                        <div className="RowCreatorColFirstDiv">
+                            <div className="RowCreatorColName" onClick={() => that.handleClick(system)} >
+                                {system.name}
+                            </div>
+                        </div>
+                        {
+                            showDeleteIcon ?
+                                <div className="RowCreatorColSecondDiv">
+                                    <div className="RowCreatorColDeleteDiv" onClick={() => that.handleDeleteClick(system)}>
+                                        <DeleteIcon className="DeleteSystemIcon" />
+                                    </div>
+                                </div> : <div></div>
+                        }
+
+
                     </Col>
             }
             else { cols[rowNum][colNum] = <Col className="EmptyCol"></Col> }

@@ -2,7 +2,7 @@ import Axios from 'axios'
 import { setAllSystems, setSystemState } from '../../../../../Actions/MainReducerAction'
 import { NotificationManager } from 'react-notifications'
 
-export default function pullAllSystems(that, skip, take) {
+export default function pullAllSystems(that, skip, take, callBack) {
     Axios.get(`http://localhost:51241/api/Systems?skip=${skip}&take=${take}`, {
         headers: {
             "accept": "text/plain",
@@ -11,8 +11,10 @@ export default function pullAllSystems(that, skip, take) {
     }).then(res => {
         that.props.dispatch(setAllSystems({ value: res.data }))
         res.data.length === 0 ? that.props.dispatch(setSystemState({ value: "NoSystemCard" })) : that.props.dispatch(setSystemState({ value: "ChooseSystem" }))
+        callBack()
 
     }).catch(err => {
             NotificationManager.error(err.message, 'Error')
+            callBack()
         })
 }

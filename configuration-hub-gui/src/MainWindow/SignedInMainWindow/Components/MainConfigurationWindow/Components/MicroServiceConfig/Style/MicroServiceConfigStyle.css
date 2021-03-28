@@ -26,6 +26,15 @@
 
 .SaveConfigurationButton {
     margin-top: 1%;
+    width: 15%;
+}
+.DeleteConfigurationButton{
+    margin-top: 1%;
+    margin-right: 10px;
+
+}
+.DeleteConfigurationButtonHidden{
+    display: none !important;
 }
 
 .SaveConfigurationButtonDiv {
@@ -38,9 +47,8 @@
     font-size: 1.5rem !important;
 }
 
-.backToMsChoosingArrowDiv {
-    width: 100%;
-    display: flex;
+
+.OptionsDivRow{
     justify-content: space-between;
 }
 
@@ -50,14 +58,20 @@
     border-radius: 30px;
     margin-top: 1%;
 }
-
-.backToMsChoosingArrowDiv :hover {
+.backToMsChoosingArrowCol{
+    display: flex;
+}
+.backToMsChoosingArrowCol :hover {
     cursor: pointer !important;
     background-color:  #343a40;
     color: blanchedalmond;
 
 }
-.backToMsChoosingArrowDiv :active{
+.backToMsChoosingArrowCol :active{
     background-color:  #24282c;
 
+}
+.ConfigurationButtonsOptionsCol{
+    display: flex;
+    justify-content: flex-end;
 }

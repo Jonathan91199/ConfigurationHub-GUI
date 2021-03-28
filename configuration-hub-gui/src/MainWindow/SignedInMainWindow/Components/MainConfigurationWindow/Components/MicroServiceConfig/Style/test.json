@@ -1,0 +1,13 @@
+{
+    "personalInfo" : {
+        "name" : "Jonathan",
+        "lastName" : "Cohen"
+    },
+    "contactInfo" : {
+        "phoneNumber" : "0505555555",
+        "email" : "JonathanEmail@Email.email"
+    }
+    
+    
+    
+}

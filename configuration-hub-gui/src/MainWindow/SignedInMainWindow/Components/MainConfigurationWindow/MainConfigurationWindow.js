@@ -18,7 +18,7 @@ class MainConfigurationWindow extends Component {
             choosenSystem : null
 
         }
-        pullAllSystems(this, this.state.skip, this.state.take)
+        pullAllSystems(this, this.state.skip, this.state.take, ()=>{this.forceUpdate()})
 
     }
 

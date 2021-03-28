@@ -1,42 +1,43 @@
 
 const defultState = {
     signInShowState: false,
-    signUpShowState : false,
+    signUpShowState: false,
 
     inputUserName: '',
     inputPassword: '',
 
-    SignUpUserError : '',
-    SignUpExplenation : 'info',
+    SignUpUserError: '',
+    SignUpExplenation: 'info',
 
-    isUserConnected : false,
-    userConnectedInfo : null,
-    
-    allSystems : [],
-    selectedSystem : null,
-    selectedSystemId : null,
-    selectedMicroService : null,
-    configData : null,
-    SystemState : "BasicLoader",
-    microServiceModalState : false,
+    isUserConnected: false,
+    userConnectedInfo: null,
 
-    signInState : "My Configurations"
-    
+    allSystems: [],
+    selectedSystem: null,
+    selectedSystemId: null,
+    selectedMicroService: null,
+    configData: null,
+    SystemState: "BasicLoader",
+    addNewSystemModal: false,
+    microServiceModalState: false,
+
+    signInState: "My Configurations"
+
 
 }
 
-export default function MainReducer( state = defultState , action) {
+export default function MainReducer(state = defultState, action) {
     switch (action.type) {
-        case 'SET_IS_USER_CONNECTED' : {
+        case 'SET_IS_USER_CONNECTED': {
             return {
                 ...state,
-                isUserConnected : action.value
+                isUserConnected: action.value
             }
         }
-        case 'SET_USER_CONNECTED_INFO' : {
+        case 'SET_USER_CONNECTED_INFO': {
             return {
                 ...state,
-                userConnectedInfo : action.value
+                userConnectedInfo: action.value
             }
         }
 
@@ -46,10 +47,10 @@ export default function MainReducer( state = defultState , action) {
                 signInShowState: action.value
             }
         }
-        case 'SET_SIGN_UP_MODAL_STATE' :{
-            return{
+        case 'SET_SIGN_UP_MODAL_STATE': {
+            return {
                 ...state,
-                signUpShowState : action.value
+                signUpShowState: action.value
             }
         }
 
@@ -57,78 +58,84 @@ export default function MainReducer( state = defultState , action) {
             return {
                 ...state,
                 inputUserName: action.value,
-                signInShowState : true
+                signInShowState: true
             }
         }
-        case 'SET_PASSWORD_INPUT' : {
+        case 'SET_PASSWORD_INPUT': {
             return {
                 ...state,
-                inputPassword : action.value,
-                signInShowState : true
+                inputPassword: action.value,
+                signInShowState: true
             }
         }
-        case 'SET_SIGN_UP_USER_ERROR' : {
+        case 'SET_SIGN_UP_USER_ERROR': {
             return {
                 ...state,
-                SignUpUserError : action.value
+                SignUpUserError: action.value
             }
         }
-        case 'SET_SIGN_UP_EXPLENATION_ALERT' :{
+        case 'SET_SIGN_UP_EXPLENATION_ALERT': {
             return {
                 ...state,
-                SignUpExplenation : action.value
+                SignUpExplenation: action.value
             }
         }
 
-        case 'SET_SIGNED_IN_STATE' : {
+        case 'SET_SIGNED_IN_STATE': {
             return {
                 ...state,
-                signInState : action.value
+                signInState: action.value
             }
         }
-        case 'SET_ALL_SYSTEMS' : {
+        case 'SET_ALL_SYSTEMS': {
             return {
                 ...state,
-                allSystems : action.value
+                allSystems: action.value
             }
         }
-        case 'SET_SELECTED_SYSTEM_ID' : {
-            return {
-                ...state, 
-                selectedSystemId : action.value
-            }
-        }
-        case 'SET_SYSTEM_STATE' : {
+        case 'SET_SELECTED_SYSTEM_ID': {
             return {
                 ...state,
-                SystemState : action.value
+                selectedSystemId: action.value
             }
         }
-        case 'SET_SELECTED_SYSTEM' : {
+        case 'SET_SYSTEM_STATE': {
             return {
                 ...state,
-                selectedSystem : action.value
+                SystemState: action.value
             }
         }
-        case 'SET_SELECTED_MS' : {
-            return { 
-                ...state, 
-                selectedMicroService : action.value
-            }
-        }
-        case 'SET_SELECTED_DATA' : {
+        case 'SET_SELECTED_SYSTEM': {
             return {
                 ...state,
-                configData : action.value
+                selectedSystem: action.value
             }
         }
-        case 'SET_MS_MODAL_STATE' : {
+        case 'SET_SELECTED_MS': {
             return {
-                ...state, 
-                microServiceModalState : action.value
+                ...state,
+                selectedMicroService: action.value
             }
         }
-        
+        case 'SET_SELECTED_DATA': {
+            return {
+                ...state,
+                configData: action.value
+            }
+        }
+        case 'SET_MS_MODAL_STATE': {
+            return {
+                ...state,
+                microServiceModalState: action.value
+            }
+        }
+        case 'SET_SHOW_ADD_NEW_SYSTEM_MODAL': {
+            return {
+                ...state,
+                addNewSystemModal: action.value
+            }
+        }
+
         default: return state
     }
 }

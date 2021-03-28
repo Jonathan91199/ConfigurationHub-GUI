@@ -96,6 +96,12 @@ export function setMicroServiceModalState(value){
         value : value.value
     }
 }
+export function setShowAddNewSystemModal(value){
+    return {
+        type : 'SET_SHOW_ADD_NEW_SYSTEM_MODAL',
+        value : value.value
+    }
+}
 
 
 

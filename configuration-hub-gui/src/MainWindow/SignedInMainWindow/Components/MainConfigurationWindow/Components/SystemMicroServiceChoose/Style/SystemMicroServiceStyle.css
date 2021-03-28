@@ -46,4 +46,22 @@
     border: 1px solid rgb(19, 85, 11);
 
 }
+.backToSystemChoosingArrow {
+    font-size: 2rem !important;
+    border: 2.5px solid #343a40;
+    border-radius: 30px;
+    margin-top: 1%;
+}
+.backToSystemChoosingArrowDiv{
+    margin-top: 10px;
+}
+.backToSystemChoosingArrowDiv :hover{
+    background-color:  #343a40;
+    cursor: pointer;
+    color: blanchedalmond;
+}
+.backToSystemChoosingArrowDiv :active{
+    background-color:  #24282c;
+
+}
 

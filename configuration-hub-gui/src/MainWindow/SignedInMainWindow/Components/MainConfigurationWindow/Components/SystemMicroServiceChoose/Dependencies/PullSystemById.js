@@ -12,6 +12,7 @@ export default function PullSystemById(id, that) {
     }).then(res => {
         that.props.dispatch(setSelectedSystem ({value : res.data}))
         that.props.dispatch(setSystemState({value : "ChooseMicroService"}))
+        that.forceUpdate()
 
     }).catch(err => {
         NotificationManager.error(err.message, 'Error')

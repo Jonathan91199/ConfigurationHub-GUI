@@ -2,7 +2,8 @@ import React from 'react'
 import { Component } from 'react'
 import { Card } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import { setSignedInState } from '../../../../../../Actions/MainReducerAction'
+import { setSignedInState, setShowAddNewSystemModal } from '../../../../../../Actions/MainReducerAction'
+import AddNewSystemModal  from '../SystemCardsCreator/Dependencies/AddNewSystem/addNewSystem'
 import './NoSystemsStyle.css'
 
 class NoConfigurationCard extends Component {
@@ -12,7 +13,7 @@ class NoConfigurationCard extends Component {
 
     }
     handleClick() {
-        this.props.dispatch(setSignedInState({ value: "New System" }))
+        this.props.dispatch(setShowAddNewSystemModal({ value: true }))
     }
 
     render() {
@@ -33,6 +34,7 @@ class NoConfigurationCard extends Component {
                         </Card.Text>
                     </Card.Body>
                 </Card>
+                <AddNewSystemModal cb={()=>this.props.dispatch(setSignedInState({value : "ChooseSystem"}))}/>
             </div>
         )
     }

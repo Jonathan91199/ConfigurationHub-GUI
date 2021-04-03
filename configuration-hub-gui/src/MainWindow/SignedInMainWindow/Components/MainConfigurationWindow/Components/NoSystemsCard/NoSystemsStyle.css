@@ -17,11 +17,11 @@
 
 }
 .NoConfigurationClickHereDiv :hover{
-    color: rgb(15, 5, 73) !important;
+    color: rgb(21, 155, 160) !important;
     font-weight: 800;
 }
 .NoConfigurationClickHereDiv :active{
-    color: rgb(5, 2, 26) !important;
+    color: rgb(14, 96, 99) !important;
     font-weight: 800;
 }
 .NoConfigurationCardMain{

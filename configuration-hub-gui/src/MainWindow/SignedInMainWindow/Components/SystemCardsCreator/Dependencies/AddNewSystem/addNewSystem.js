@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { setShowAddNewSystemModal } from '../../../../../../../../Actions/MainReducerAction'
+import { setShowAddNewSystemModal } from '../../../../../../Actions/MainReducerAction'
 import { Modal, Col, Row, Form } from 'react-bootstrap'
 import AddCircleOutlineIcon from '@material-ui/icons/Add';
 import { NotificationManager } from 'react-notifications'

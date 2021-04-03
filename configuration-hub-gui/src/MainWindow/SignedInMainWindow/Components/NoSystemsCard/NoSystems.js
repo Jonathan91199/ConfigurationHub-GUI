@@ -2,7 +2,7 @@ import React from 'react'
 import { Component } from 'react'
 import { Card } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import { setSignedInState, setShowAddNewSystemModal } from '../../../../../../Actions/MainReducerAction'
+import { setSignedInState, setShowAddNewSystemModal } from '../../../../Actions/MainReducerAction'
 import AddNewSystemModal  from '../SystemCardsCreator/Dependencies/AddNewSystem/addNewSystem'
 import './NoSystemsStyle.css'
 

@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Container } from 'react-bootstrap'
 import './Style/MainWindowStyle.css'
 import WelcomeCard from './WelcomeCord/WelcomeCard'
-import SignedInMainWindow from './SignedInMainWindow/SignedInMainWindow'
+import MainConfigurationWindow from './SignedInMainWindow/MainConfigurationWindow'
 
 
 class MainWindow extends Component {
@@ -14,7 +14,7 @@ class MainWindow extends Component {
         return (
             
                 <Container fluid className="MainWindowMainDiv">
-                    {this.props.isUserConnected ? <SignedInMainWindow /> : <WelcomeCard />}
+                    {this.props.isUserConnected ? <MainConfigurationWindow /> : <WelcomeCard />}
                 </Container>
         )
     }

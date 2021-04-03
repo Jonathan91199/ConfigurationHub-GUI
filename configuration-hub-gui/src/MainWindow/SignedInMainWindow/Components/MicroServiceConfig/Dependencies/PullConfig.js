@@ -1,6 +1,8 @@
 import Axios from 'axios'
-import { setConfigData } from '../../../../../../../Actions/MainReducerAction'
+import { setConfigData } from '../../../../../Actions/MainReducerAction'
 import { NotificationManager } from 'react-notifications'
+
+
 export default function PullConfig(id, that, callBack) {
     Axios.get(`http://${window.location.hostname}:51241/api/Microservices/${id}`, {
         headers: {

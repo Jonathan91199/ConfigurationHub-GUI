@@ -1,6 +1,6 @@
 import Axios from 'axios'
 import { NotificationManager } from 'react-notifications'
-import { setSelectedSystem, setSystemState } from '../../../../../../../Actions/MainReducerAction'
+import { setSelectedSystem, setSystemState } from '../../../../../Actions/MainReducerAction'
 
 export default function PullSystemById(id, that) {
     console.log(id)

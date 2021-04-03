@@ -2,7 +2,7 @@ import React from 'react'
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { Modal, Row, Col, Form } from 'react-bootstrap'
-import { setMicroServiceModalState } from '../../../../../../../../Actions/MainReducerAction'
+import { setMicroServiceModalState } from '../../../../../../Actions/MainReducerAction'
 import AddCircleOutlineIcon from '@material-ui/icons/Add';
 import Axios from 'axios'
 import './AddMicroServiceModalStyle.css'

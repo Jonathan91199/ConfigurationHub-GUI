@@ -1,5 +1,5 @@
 import Axios from 'axios'
-import { setAllSystems, setSystemState } from '../../../../../Actions/MainReducerAction'
+import { setAllSystems, setSystemState } from '../../../Actions/MainReducerAction'
 import { NotificationManager } from 'react-notifications'
 
 export default function pullAllSystems(that, skip, take, callBack) {

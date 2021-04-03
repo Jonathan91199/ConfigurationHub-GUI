@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Row, Button } from 'react-bootstrap'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import SystemRowCreator from '../SystemCardsCreator/Dependencies/SystemRowsCreator'
-import { setSystemState, setMicroServiceModalState, setSelectedMicroService } from '../../../../../../Actions/MainReducerAction'
+import { setSystemState, setMicroServiceModalState, setSelectedMicroService } from '../../../../Actions/MainReducerAction'
 import AddMicroServiceModal from './Dependencies/AddMicroServiceModal/AddMicroServiceModal'
 import PullSystemById from './Dependencies/PullSystemById'
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';

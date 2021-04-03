@@ -1,7 +1,7 @@
 import React from 'react'
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { setSelectedSystemId, setSystemState, setShowAddNewSystemModal } from '../../../../../../Actions/MainReducerAction'
+import { setSelectedSystemId, setSystemState, setShowAddNewSystemModal } from '../../../../Actions/MainReducerAction'
 import SystemRowCreator from './Dependencies/SystemRowsCreator'
 import { Button } from 'react-bootstrap'
 import deleteSystem from './Dependencies/deleteSystem'

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap'
-import { setSystemState } from '../../../../../../Actions/MainReducerAction'
+import { setSystemState } from '../../../../Actions/MainReducerAction'
 import PullConfig from './Dependencies/PullConfig'
 import JSONEditor from 'jsoneditor'
 import './Style/MicroServiceConfigStyle.css'

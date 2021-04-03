@@ -6,7 +6,7 @@ import SystemRowCreator from './Dependencies/SystemRowsCreator'
 import { Button } from 'react-bootstrap'
 import deleteSystem from './Dependencies/deleteSystem'
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
-import AddNewSystemModal from './Dependencies/addNewSystem'
+import AddNewSystemModal from './Dependencies/AddNewSystem/addNewSystem'
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import './Style/SystemCardCreatorStyle.css'

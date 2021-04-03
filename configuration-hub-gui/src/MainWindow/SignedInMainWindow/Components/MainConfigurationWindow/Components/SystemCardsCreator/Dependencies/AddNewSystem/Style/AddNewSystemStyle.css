@@ -1,35 +1,38 @@
-.AddMsModalMain .modal-dialog .modal-content {
+.AddSystemModalMain .modal-dialog .modal-content {
     background: rgba(253, 253, 247, 0.281) !important;
     backdrop-filter: saturate(100%) blur(10px) !important;
     margin-top: 150px;
 }
 
-.AddMsModalHeader {
+.AddSystemModalHeader {
     justify-content: center !important;
     font-family: Nunito !important;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
-.AddMsModalTitle {
+.AddSystemModalTitle {
     font-size: 40px !important;
 }
 
-.AddMsModalBody {}
+.AddSystemModalBody {}
 
-.AddMsModalBodyRow{
+.AddSystemModalBodyRow {
     justify-content: center;
 }
-.AddMsModalBodyCol{
+
+.AddSystemModalBodyCol {
     width: 400px !important;
 }
-#MicroServiceForm{
+#SystemNameForm{
     font-size: 2rem !important;
     text-align: center;
 }
-.AddMsModalFooter {
-    
+
+.AddSystemModalFooter {
+    /* justify-content: center !important; */
 }
-.AddMicroServiceButton{
+
+.AddSystemButton {
     cursor: pointer;
     font-size: 20px;
     border: 1px solid rgba(0, 0, 0, 0.411);
@@ -37,17 +40,18 @@
     padding: 2px 10px;
     user-select: none;
     color: rgb(201, 184, 184);
-
 }
-.AddMsCircleOutlineIcon{
+
+.AddSystemCircleOutlineIcon {
     font-size: 30px !important;
     color: rgb(201, 184, 184);
 }
-.AddMsModalFooter :hover{
+
+.AddSystemModalFooter :hover {
     background-color: rgb(10, 63, 65);
     color: rgb(201, 184, 184);
 }
-.AddMsModalFooter :active{
-    background-color: rgb(2, 33, 34);
 
+.AddSystemModalFooter :active {
+    background-color: rgb(2, 33, 34);
 }

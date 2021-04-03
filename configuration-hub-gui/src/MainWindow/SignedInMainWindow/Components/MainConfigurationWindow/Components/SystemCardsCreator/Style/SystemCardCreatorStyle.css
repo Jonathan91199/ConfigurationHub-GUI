@@ -10,7 +10,8 @@
     margin: 5px 3px;
     border: 1px solid black;
     border-radius: 15px;
-    background-color: rgba(205, 255, 248, 0.644);
+    background-color: rgba(178, 248, 231, 0.719);
+    backdrop-filter: blur(20px);
     font-size: 40px;
     padding: 10px;
     font-family: Nunito;
@@ -21,13 +22,15 @@
 }
 
 .RowCreatorColFirstDiv  :hover {
-    background-color: rgba(128, 128, 204, 0.63);
+    background-color: rgba(4, 121, 92, 0.719);
     cursor: pointer;
     user-select: none;
+    color: white;
+
 }
 
 .RowCreatorColFirstDiv :active {
-    background-color: rgba(74, 74, 192, 0.63);
+    background-color: rgba(2, 77, 58, 0.719);
     color: white;
 }
 .RowCreatorColSecondDiv :hover{

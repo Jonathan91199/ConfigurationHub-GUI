@@ -59,6 +59,8 @@
 
 .ExplenationRow {
     /* margin: 15px; */
+    color: rgba(255, 255, 255, 0.74);
+    font-weight: 100;
     margin:15px 25px 15px !important;
 }
 

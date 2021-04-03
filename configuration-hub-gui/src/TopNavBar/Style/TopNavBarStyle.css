@@ -1,7 +1,8 @@
 .MainNavbarStyle {
     border-bottom: 1px solid;
     height: 100%;
-
+    color: white;
+    backdrop-filter: blur(40px);
 }
 
 .logoPic {
@@ -16,6 +17,7 @@
 }
 
 .logoName {
+    color: white;
     font-size: 50px;
     font-family: Nunito;
 }

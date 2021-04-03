@@ -3,7 +3,7 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { Modal, Row, Col, Form } from 'react-bootstrap'
 import { setMicroServiceModalState } from '../../../../../../../../Actions/MainReducerAction'
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import AddCircleOutlineIcon from '@material-ui/icons/Add';
 import Axios from 'axios'
 import './AddMicroServiceModalStyle.css'
 
@@ -58,7 +58,7 @@ class AddMicroServiceModal extends Component {
                 </Modal.Body>
                 <Modal.Footer className="AddMsModalFooter">
                     <div className="AddMicroServiceButton" onClick={() => this.handleAddClick()}>
-                        <AddCircleOutlineIcon className="AddMsCircleOutlineIcon" />&nbsp;Add
+                        <AddCircleOutlineIcon className="AddMsCircleOutlineIcon" />
                     </div>
                 </Modal.Footer>
             </Modal>

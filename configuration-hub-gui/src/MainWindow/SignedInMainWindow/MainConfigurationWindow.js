@@ -15,21 +15,21 @@ class MainConfigurationWindow extends Component {
         this.state = {
             skip: 0,
             take: 15,
-            choosenSystem : null
+            choosenSystem: null
 
         }
-        pullAllSystems(this, this.state.skip, this.state.take, ()=>{this.forceUpdate()})
+        pullAllSystems(this, this.state.skip, this.state.take, () => { this.forceUpdate() })
 
     }
 
 
     render() {
         let SystemState = {
-            "BasicLoader" : <BasicLoader/>,
-            "NoSystemCard" : <NoSystemsCard/>,
-            "ChooseSystem": <SystemCardsCreator callBack={(system) => this.setState({choosenSystem : system})} PullSingleSystem={(id) => PullSystemById(id, this)} />,
+            "BasicLoader": <BasicLoader />,
+            "NoSystemCard": <NoSystemsCard />,
+            "ChooseSystem": <SystemCardsCreator callBack={(system) => this.setState({ choosenSystem: system })} PullSingleSystem={(id) => PullSystemById(id, this, () => this.forceUpdate)} />,
             "ChooseMicroService": <SystemMicroServiceChoose callBack={() => this.forceUpdate()} system={this.state.choosenSystem} />,
-            "ShowMircoServiceConfig" : <MicroServiceConfig/>
+            "ShowMircoServiceConfig": <MicroServiceConfig />
         }
         return SystemState[this.props.SystemState]
     }

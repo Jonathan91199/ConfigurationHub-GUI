@@ -7,6 +7,7 @@ import { Button } from 'react-bootstrap'
 import deleteSystem from './Dependencies/deleteSystem'
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import AddNewSystemModal from './Dependencies/AddNewSystem/addNewSystem'
+import Header from '../Header/Header'
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import './Style/SystemCardCreatorStyle.css'
@@ -56,9 +57,11 @@ class SystemCardsCreator extends Component {
         let deleteButtonState = this.deleteSystem ?
             { variant: "warning", innerHtml: <DeleteForeverIcon className="SystemOptionsIcon" /> } :
             { variant: "danger", innerHtml: <DeleteOutlineIcon className="SystemOptionsIcon" /> }
+        
         if (componentDidMounted) {
             return (
                 <div>
+                    <Header headerName="Choose System"/>
                     {this.state.AllSystemsState}
                     <div className="SystemOptionsMainDiv">
                         <Button className="SystemOptionsButton" disabled={this.deleteSystem} variant="success" onClick={() => { this.props.dispatch(setShowAddNewSystemModal({ value: true })) }}><AddCircleOutlineIcon className="SystemOptionsIcon" /></Button>

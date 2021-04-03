@@ -1,0 +1,8 @@
+.HeaderMainDiv{
+    font-size: 50px;
+    font-family: Nunito;
+    color: rgb(50, 143, 143);
+    font-style: italic;
+    text-decoration: underline;
+    -webkit-text-stroke: medium;
+}

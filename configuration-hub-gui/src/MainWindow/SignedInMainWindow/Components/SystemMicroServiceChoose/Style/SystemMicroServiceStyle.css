@@ -5,6 +5,7 @@
 }
 .BackToSystemsButtonRow{
     padding-left: 20px;
+    justify-content: space-between;
 }
 
 .BackToSystemsButtonDiv{
@@ -65,4 +66,14 @@
     background-color:  #9fa1a1;
 
 }
+.MsOptionsButton{
+    margin: 5px;
+    padding: 15px !important;
 
+}
+.MsOptionsIcon{
+    font-size: 3rem !important;
+}
+.MsOptionsButtonDisabled{
+    display: none !important;
+}

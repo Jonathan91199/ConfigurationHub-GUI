@@ -1,7 +1,7 @@
 import React from 'react'
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { Row, Col, Button } from 'react-bootstrap'
+import { Row, Button } from 'react-bootstrap'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import SystemRowCreator from '../SystemCardsCreator/Dependencies/SystemRowsCreator'
 import { setSystemState, setMicroServiceModalState, setSelectedMicroService } from '../../../../Actions/MainReducerAction'
@@ -74,10 +74,7 @@ class SystemMicroServiceChoose extends Component {
         }
         return (
             <div>
-
                 <div>
-
-
                     <Row className="BackToSystemsButtonRow" >
                         <div className="backToSystemChoosingArrowDiv">
                             <ArrowBackIcon className="backToSystemChoosingArrow" onClick={this.handleGoBackClick} />
@@ -86,7 +83,6 @@ class SystemMicroServiceChoose extends Component {
                         <div></div>
                     </Row>
                     {microServiceOptions}
-
                 </div>
                 <div className="SystemOptionsMainDiv">
                     <Button className="MsOptionsButton" disabled={this.deleteMicroService} variant="success" onClick={() => { this.props.dispatch(setMicroServiceModalState({ value: true })) }}><AddCircleOutlineIcon className="MsOptionsIcon" /></Button>

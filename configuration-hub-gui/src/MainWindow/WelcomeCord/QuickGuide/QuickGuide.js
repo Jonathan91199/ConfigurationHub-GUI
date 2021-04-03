@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Component } from 'react';
-import { Card, Accordion } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import '../Style/WelcomeCardStyle.css'
 

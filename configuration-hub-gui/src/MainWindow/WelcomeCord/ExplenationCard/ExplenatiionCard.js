@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Component } from 'react';
-import { Card, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import '../Style/WelcomeCardStyle.css'
 import Explentaion from './Explenation'
